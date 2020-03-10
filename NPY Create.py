@@ -75,11 +75,14 @@ def process_test_data():
     test_num_counter=0
     testing_data = [] 
     for img in tqdm(os.listdir(TEST_DIR)): 
+        # labeling the images 
+        label = label_img(img) 
+        
         path = os.path.join(TEST_DIR, img) 
        
         img = cv2.imread(path, cv2.IMREAD_GRAYSCALE) 
         img = cv2.resize(img, (450, 350)) 
-        testing_data.append([np.array(img), test_num_counter]) 
+        testing_data.append([np.array(img), np.array(label)]) 
         test_num_counter += 1
           
     shuffle(testing_data) 
