@@ -123,10 +123,10 @@ model.compile(optimizer='adam',
               loss='categorical_crossentropy',
               metrics=['accuracy'])
 
-history = model.fit(tr_img_data, tr_lbl_data, epochs=15)
+history = model.fit(tr_img_data, tr_lbl_data, epochs=40)
 
 
-test_loss, test_acc = model.evaluate(tst_img_data,  tst_lbl_data, verbose=2)
+#test_loss, test_acc = model.evaluate(tst_img_data,  tst_lbl_data, verbose=2)
 
 model.summary()
 model.save('bangla_model.hdf5')
