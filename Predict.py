@@ -73,7 +73,7 @@ def e():
 def f():
     print("ঊ")
     global quality_model 
-    quality_model = tf.keras.models.load_model("f.hdf5")
+    quality_model = tf.keras.models.load_model("letter-models/f.hdf5")
     quality_assessment()
     
 def g():
@@ -126,7 +126,7 @@ def switch(letter_index):
 
 #main code 
     
-path= 'Generated-Dataset/Train/g-1-39.jpg'
+path= 'Generated-Dataset/Test/b-1-41.jpg'
 
 # loading the image from the path and then converting them into 
 # greyscale for easier covnet prob 
