@@ -24,6 +24,7 @@ tr_lbl_data = lbl_data[:train_data_num,:]
 tst_img_data = img_data[train_data_num:,:,:,:]
 tst_lbl_data = lbl_data[train_data_num:,:]
 
+#Code taken from: https://github.com/keras-team/keras/issues/9214
 base_model = applications.VGG16(weights='imagenet', include_top=False)
 x = base_model.output
 x = layers.GlobalMaxPooling2D()(x)
