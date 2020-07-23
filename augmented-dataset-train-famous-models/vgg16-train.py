@@ -4,7 +4,8 @@ import numpy as np
 from random import shuffle 
 from tqdm import tqdm 
 import tensorflow as tf
-from tensorflow.keras import layers,Sequential,optimizers,applications, Model, applications
+from tensorflow.keras import layers,Sequential,optimizers,applications, Model, applications 
+
 
 num_classes=44
 batch_size = 8 #more means better faster convergence but takes more resources
@@ -72,11 +73,12 @@ model.fit(x_train, y_train, epochs=20 , batch_size=batch_size, shuffle=False,
           validation_split=0.1) #will try with 5 epochs later
 
 print('Testing on unseen data:')
-x_test = applications.resnet.preprocess_input(tst_img_data)
+x_test = applications.vgg16.preprocess_input(tst_img_data)
 y_test = tst_lbl_data
 test_loss, test_acc = model.evaluate(x_test,  y_test, verbose=1)
 #model.summary()
-model.save('vgg16_model.hdf5')
+
+model.save('vgg16_model.model')
+model.save('vgg16_model.h5')
 
 print("Saved model to disk")
-
