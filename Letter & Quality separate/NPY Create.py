@@ -10,17 +10,15 @@ from tqdm import tqdm
   
 '''Setting up the env'''
   
-TRAIN_DIR = 'Generated-Dataset/Train'
-TEST_DIR = 'Generated-Dataset/Test'
+LOCATION = 'D:\Github Projects\Bangla-Handwriting\Datasets\Bangla Handwriting Dataset - Augmented Mini'
 
 LR = 1e-3
   
   
   
 '''Labelling the dataset'''
-def label_img(img): 
-    word_label = img.split('-')[0] 
-    # DIY One hot encoder 
+def label_img(word_label): 
+
     if   word_label == 'a': return [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
     elif word_label == 'b': return [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
     elif word_label == 'c': return [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0] 
@@ -33,65 +31,48 @@ def label_img(img):
     elif word_label == 'j': return [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] 
     elif word_label == 'k': return [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1] 
     
+data=[]
   
 '''Creating the training data'''
-def create_train_data(): 
+def create_data(): 
     # Creating an empty list where we should store the training data 
     # after a little preprocessing of the data 
-    training_data = [] 
-  
+     
+    
     # tqdm is only used for interactive loading 
     # loading the training data 
-    for img in tqdm(os.listdir(TRAIN_DIR)): 
-  
-        # labeling the images 
-        label = label_img(img) 
-  
-        path = os.path.join(TRAIN_DIR, img) 
-  
-        # loading the image from the path and then converting them into 
-        # greyscale for easier covnet prob 
-        img = cv2.imread(path, cv2.IMREAD_GRAYSCALE) 
-  
-        # resizing the image for processing them in the covnet 
-        img = cv2.resize(img, (450, 350)) 
-  
-        # final step-forming the training data list with numpy array of the images 
-        training_data.append([np.array(img), np.array(label)]) 
+    for letterfolder in os.listdir(LOCATION): 
+        
+        letter_path = os.path.join(LOCATION, letterfolder) 
+        for qualityfolder in os.listdir(letter_path):
+            quality_path = os.path.join(letter_path, qualityfolder) 
+
+            for img in tqdm(os.listdir(quality_path)):   
+                # labeling the images 
+                label = label_img(letterfolder) 
+                
+                path = os.path.join(quality_path, img) 
+                
+                # loading the image from the path and then converting them into 
+                # greyscale for easier covnet prob 
+                img = cv2.imread(path, cv2.IMREAD_COLOR) 
+          
+                # resizing the image for processing them in the covnet 
+                img = cv2.resize(img, (224, 224)) 
+                
+                print(path,' ',np.transpose(label))          
+                data.append([np.array(img), np.array(label)]) 
+
+
+
   
     # shuffling of the training data to preserve the random state of our data 
-    shuffle(training_data) 
+    shuffle(data) 
   
     # saving our trained data for further uses if required 
-    np.save('train_data.npy', training_data) 
-    return training_data 
-  
-'''Processing the given test data'''
-# Almost same as processing the training data but 
-# we dont have to label it. 
+    np.save('data.npy', data) 
+    return data 
+
+create_data()
 
 
-def process_test_data(): 
-    test_num_counter=0
-    testing_data = [] 
-    for img in tqdm(os.listdir(TEST_DIR)): 
-        # labeling the images 
-        label = label_img(img) 
-        
-        path = os.path.join(TEST_DIR, img) 
-       
-        img = cv2.imread(path, cv2.IMREAD_GRAYSCALE) 
-        img = cv2.resize(img, (450, 350)) 
-        testing_data.append([np.array(img), np.array(label)]) 
-        test_num_counter += 1
-          
-    shuffle(testing_data) 
-    np.save('test_data.npy', testing_data) 
-    return testing_data 
-  
-'''Running the training and the testing in the dataset for our model'''
-train_data = create_train_data() 
-test_data = process_test_data() 
-  
-# train_data = np.load('train_data.npy') 
-# test_data = np.load('test_data.npy') 
