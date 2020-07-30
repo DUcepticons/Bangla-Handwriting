@@ -63,22 +63,22 @@ for quality_data in os.listdir(LOCATION):
     #model.add(layers.Dropout(0.5))
     model.add(layers.Dense(256,activation='relu'))
     '''
-    
+    print(quality_data[0])
     print(model.evaluate(x_train, y_train, batch_size=batch_size, verbose=1))
-    model.fit(x_train, y_train, epochs=15 , batch_size=batch_size, shuffle=False, 
+    model.fit(x_train, y_train, epochs=8 , batch_size=batch_size, shuffle=False, 
               validation_split=0.1)
     
-    '''
+ 
     #unfreezing all layers and retraining with low learning rate
     for layer in model.layers:
         layer.trainable = True
     
     optimizer2=optimizers.Adam(lr=1e-4)
     model.compile(optimizer=optimizer2, loss='categorical_crossentropy', metrics=['accuracy'])
-    model.fit(x_train, y_train, epochs=20 , batch_size=batch_size, shuffle=False, 
+    model.fit(x_train, y_train, epochs=15 , batch_size=batch_size, shuffle=False, 
               validation_split=0.1) #will try with 5 epochs later
 
-    '''
+  
     
     print('Testing on unseen data:')
     x_test = applications.vgg16.preprocess_input(tst_img_data)
