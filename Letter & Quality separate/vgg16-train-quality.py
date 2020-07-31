@@ -37,7 +37,7 @@ for quality_data in os.listdir(LOCATION):
     x = layers.Dense(64, activation='relu')(x)
     predictions = layers.Dense(num_classes, activation='softmax')(x)
     model = Model(inputs=base_model.input, outputs=predictions)
-    
+    model.summary()
     
     for layer in base_model.layers:
         layer.trainable = False
@@ -84,7 +84,7 @@ for quality_data in os.listdir(LOCATION):
     x_test = applications.vgg16.preprocess_input(tst_img_data)
     y_test = tst_lbl_data
     test_loss, test_acc = model.evaluate(x_test,  y_test, verbose=1)
-    #model.summary()
+    model.summary()
     
     
     model.save(quality_data[0]+'_vgg16_model.h5')

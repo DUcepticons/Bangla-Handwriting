@@ -37,7 +37,7 @@ for quality_data in os.listdir(LOCATION):
     x = layers.Dense(64, activation='relu')(x)
     predictions = layers.Dense(num_classes, activation='softmax')(x)
     model = Model(inputs=base_model.input, outputs=predictions)
-    
+    model.summary()
     
     for layer in base_model.layers:
         layer.trainable = False

@@ -28,13 +28,12 @@ tst_lbl_data = lbl_data[train_data_num:,:]
 
 
 #Code taken from: https://github.com/keras-team/keras/issues/9214
-base_model = applications.VGG16(weights='imagenet', include_top=False)
+base_model = applications.ResNet50(weights='imagenet', include_top=False)
 x = base_model.output
 x = layers.GlobalMaxPooling2D()(x)
 x = layers.Dense(512, activation='relu')(x)
 predictions = layers.Dense(num_classes, activation='softmax')(x)
 model = Model(inputs=base_model.input, outputs=predictions)
-
 
 for layer in base_model.layers:
     layer.trainable = False
@@ -44,7 +43,7 @@ optimizer=optimizers.Adam(lr=1e-3)
 model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
 
   
-x_train = applications.vgg16.preprocess_input(tr_img_data)
+x_train = applications.resnet.preprocess_input(tr_img_data)
 y_train = tr_lbl_data
 
 '''
@@ -78,12 +77,12 @@ model.fit(x_train, y_train, epochs=3 , batch_size=batch_size, shuffle=False,
 
 
 print('Testing on unseen data:')
-x_test = applications.vgg16.preprocess_input(tst_img_data)
+x_test = applications.resnet.preprocess_input(tst_img_data)
 y_test = tst_lbl_data
 test_loss, test_acc = model.evaluate(x_test,  y_test, verbose=1)
 #model.summary()
 
 
-model.save('vgg16_model.h5')
+model.save('resnet50_model.h5')
 
 print("Saved model to disk")

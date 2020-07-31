@@ -1,20 +1,24 @@
-Handwriting/Letter & Quality separate')
-(6677, 2)
-6400/6400 [==============================] - 170s 27ms/sample - loss: 29.6928 - accuracy: 0.0992
-[29.692764654755592, 0.09921875]
+Python 3.7.4 (default, Aug  9 2019, 18:34:13) [MSC v.1915 64 bit (AMD64)]
+Type "copyright", "credits" or "license" for more information.
+
+IPython 7.12.0 -- An enhanced Interactive Python.
 
 runfile('D:/Github Projects/Bangla-Handwriting/Letter & Quality separate/vgg16-train.py', wdir='D:/Github Projects/Bangla-Handwriting/Letter & Quality separate')
+(6677, 2)
+6400/6400 [==============================] - 68s 11ms/sample - loss: 21.2988 - accuracy: 0.1181
+[21.298793393969536, 0.118125]
 Train on 5760 samples, validate on 640 samples
-Epoch 1/5
-5760/5760 [==============================] - 65s 11ms/sample - loss: 2.2237 - accuracy: 0.7752 - val_loss: 0.9155 - val_accuracy: 0.8438
-Epoch 2/5
-5760/5760 [==============================] - 61s 11ms/sample - loss: 0.4258 - accuracy: 0.9064 - val_loss: 0.4481 - val_accuracy: 0.9016
-Epoch 3/5
-5760/5760 [==============================] - 60s 10ms/sample - loss: 0.1877 - accuracy: 0.9500 - val_loss: 0.3947 - val_accuracy: 0.9187
-Epoch 4/5
-5760/5760 [==============================] - 59s 10ms/sample - loss: 0.1954 - accuracy: 0.9483 - val_loss: 0.4327 - val_accuracy: 0.9234
-Epoch 5/5
-5760/5760 [==============================] - 59s 10ms/sample - loss: 0.2958 - accuracy: 0.9333 - val_loss: 0.3674 - val_accuracy: 0.9312
+Epoch 1/2
+5760/5760 [==============================] - 66s 12ms/sample - loss: 2.3413 - accuracy: 0.7788 - val_loss: 0.8467 - val_accuracy: 0.8484
+Epoch 2/2
+5760/5760 [==============================] - 64s 11ms/sample - loss: 0.4282 - accuracy: 0.9073 - val_loss: 0.4979 - val_accuracy: 0.8938
+Train on 5760 samples, validate on 640 samples
+Epoch 1/3
+5760/5760 [==============================] - 161s 28ms/sample - loss: 0.3852 - accuracy: 0.8899 - val_loss: 0.0732 - val_accuracy: 0.9750
+Epoch 2/3
+5760/5760 [==============================] - 158s 27ms/sample - loss: 0.0854 - accuracy: 0.9740 - val_loss: 0.0181 - val_accuracy: 0.9937
+Epoch 3/3
+5760/5760 [==============================] - 157s 27ms/sample - loss: 0.0392 - accuracy: 0.9894 - val_loss: 0.0903 - val_accuracy: 0.9719
 Testing on unseen data:
-277/277 [==============================] - 5s 17ms/sample - loss: 0.2615 - accuracy: 0.9531
+277/277 [==============================] - 5s 18ms/sample - loss: 0.1542 - accuracy: 0.9458
 Saved model to disk
