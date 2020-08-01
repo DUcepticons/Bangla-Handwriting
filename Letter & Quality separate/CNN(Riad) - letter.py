@@ -102,11 +102,11 @@ model.compile(optimizer='adam',
               loss='categorical_crossentropy',
               metrics=['accuracy'])
 
-history = model.fit(tr_img_data, tr_lbl_data, epochs=1)
+history = model.fit(tr_img_data, tr_lbl_data, epochs=30)
 
 
 
 
 model.summary()
-model.save('ajaira.h5')
+model.save('model_test.h5')
 print("Saved model to disk")

@@ -8,7 +8,7 @@ from tensorflow.keras import layers,Sequential,optimizers,applications, Model, a
 from tensorflow.keras.preprocessing import image
 
 np.random.seed(1)
-tf.random.set_seed(2)
+tf.random.set_seed(1)
 
 num_classes=4
 batch_size = 8 #more means better faster convergence but takes more resources

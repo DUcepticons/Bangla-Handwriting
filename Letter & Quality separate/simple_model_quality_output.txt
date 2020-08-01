@@ -48,57 +48,6 @@ Testing on unseen data:
 100/100 [==============================] - 0s 2ms/sample - loss: 0.1337 - accuracy: 0.9400
 Saved model to disk
 
-runfile('D:/Github Projects/Bangla-Handwriting/Letter & Quality separate/simple-cnn-train-quality.py', wdir='D:/Github Projects/Bangla-Handwriting/Letter & Quality separate')
-(2000, 2)
-b
-1900/1900 [==============================] - 2s 976us/sample - loss: 9.7081 - accuracy: 0.2500
-[9.708091587267424, 0.25]
-Train on 1710 samples, validate on 190 samples
-Epoch 1/20
-1710/1710 [==============================] - 4s 2ms/sample - loss: 2.1498 - accuracy: 0.2743 - val_loss: 1.3479 - val_accuracy: 0.3316
-Epoch 2/20
-1710/1710 [==============================] - 4s 2ms/sample - loss: 1.3961 - accuracy: 0.2602 - val_loss: 1.3876 - val_accuracy: 0.2526
-Epoch 3/20
-1710/1710 [==============================] - 3s 2ms/sample - loss: 1.3871 - accuracy: 0.2386 - val_loss: 1.3873 - val_accuracy: 0.2526
-Epoch 4/20
-1710/1710 [==============================] - 3s 2ms/sample - loss: 1.3868 - accuracy: 0.2485 - val_loss: 1.3876 - val_accuracy: 0.2105
-Epoch 5/20
- 600/1710 [=========>....................] - ETA: 2s - loss: 1.3871 - accuracy: 0.2196Traceback (most recent call last):
-
-  File "D:\Github Projects\Bangla-Handwriting\Letter & Quality separate\simple-cnn-train-quality.py", line 59, in <module>
-    validation_split=0.1)
-
-  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 819, in fit
-    use_multiprocessing=use_multiprocessing)
-
-  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\keras\engine\training_v2.py", line 342, in fit
-    total_epochs=epochs)
-
-  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\keras\engine\training_v2.py", line 128, in run_one_epoch
-    batch_outs = execution_function(iterator)
-
-  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\keras\engine\training_v2_utils.py", line 98, in execution_function
-    distributed_function(input_fn))
-
-  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\util\nest.py", line 568, in map_structure
-    structure[0], [func(*x) for x in entries],
-
-  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\util\nest.py", line 568, in <listcomp>
-    structure[0], [func(*x) for x in entries],
-
-  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\keras\engine\training_v2_utils.py", line 130, in _non_none_constant_value
-    constant_value = tensor_util.constant_value(v)
-
-  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\framework\tensor_util.py", line 822, in constant_value
-    return tensor.numpy()
-
-  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\framework\ops.py", line 942, in numpy
-    maybe_arr = self._numpy()  # pylint: disable=protected-access
-
-  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\framework\ops.py", line 908, in _numpy
-    return self._numpy_internal()
-
-KeyboardInterrupt
 
 
 runfile('D:/Github Projects/Bangla-Handwriting/Letter & Quality separate/simple-cnn-train-quality.py', wdir='D:/Github Projects/Bangla-Handwriting/Letter & Quality separate')
@@ -149,4 +98,100 @@ Epoch 20/20
 1710/1710 [==============================] - 3s 2ms/sample - loss: 0.0957 - accuracy: 0.9596 - val_loss: 0.2264 - val_accuracy: 0.9263
 Testing on unseen data:
 100/100 [==============================] - 0s 2ms/sample - loss: 0.3525 - accuracy: 0.9300
+Saved model to disk
+
+c
+1900/1900 [==============================] - 2s 929us/sample - loss: 12.8373 - accuracy: 0.2489
+[12.83728216472425, 0.24894737]
+Train on 1710 samples, validate on 190 samples
+Epoch 1/20
+1710/1710 [==============================] - 4s 2ms/sample - loss: 2.3659 - accuracy: 0.2971 - val_loss: 1.3106 - val_accuracy: 0.3263
+Epoch 2/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 1.3282 - accuracy: 0.3023 - val_loss: 1.2626 - val_accuracy: 0.3421
+Epoch 3/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 1.2425 - accuracy: 0.3784 - val_loss: 1.1022 - val_accuracy: 0.3947
+Epoch 4/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 1.0891 - accuracy: 0.4673 - val_loss: 1.2149 - val_accuracy: 0.3368
+Epoch 5/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.9962 - accuracy: 0.5281 - val_loss: 0.8355 - val_accuracy: 0.5842
+Epoch 6/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.8334 - accuracy: 0.6205 - val_loss: 0.7562 - val_accuracy: 0.6474
+Epoch 7/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.7856 - accuracy: 0.6585 - val_loss: 0.6884 - val_accuracy: 0.6526
+Epoch 8/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 1.0388 - accuracy: 0.5152 - val_loss: 1.2749 - val_accuracy: 0.3368
+Epoch 9/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.6939 - accuracy: 0.6936 - val_loss: 0.6624 - val_accuracy: 0.6789
+Epoch 10/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.5284 - accuracy: 0.7830 - val_loss: 0.4734 - val_accuracy: 0.7789
+Epoch 11/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.4440 - accuracy: 0.8135 - val_loss: 0.4346 - val_accuracy: 0.8316
+Epoch 12/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.4579 - accuracy: 0.8152 - val_loss: 0.4428 - val_accuracy: 0.8158
+Epoch 13/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.3368 - accuracy: 0.8643 - val_loss: 0.3856 - val_accuracy: 0.8421
+Epoch 14/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.3040 - accuracy: 0.8725 - val_loss: 0.4755 - val_accuracy: 0.8263
+Epoch 15/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.4696 - accuracy: 0.8170 - val_loss: 0.4129 - val_accuracy: 0.8684
+Epoch 16/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.3847 - accuracy: 0.8509 - val_loss: 0.4103 - val_accuracy: 0.8263
+Epoch 17/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.2482 - accuracy: 0.9018 - val_loss: 0.2711 - val_accuracy: 0.9105
+Epoch 18/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.2108 - accuracy: 0.9158 - val_loss: 0.2421 - val_accuracy: 0.9316
+Epoch 19/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.1933 - accuracy: 0.9234 - val_loss: 0.2755 - val_accuracy: 0.9000
+Epoch 20/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.1416 - accuracy: 0.9433 - val_loss: 0.2942 - val_accuracy: 0.9000
+Testing on unseen data:
+100/100 [==============================] - 0s 2ms/sample - loss: 0.2014 - accuracy: 0.9200
+Saved model to disk
+
+d
+1900/1900 [==============================] - 2s 896us/sample - loss: 23.7426 - accuracy: 0.2495
+[23.742551506444027, 0.24947369]
+Train on 1710 samples, validate on 190 samples
+Epoch 1/20
+1710/1710 [==============================] - 4s 2ms/sample - loss: 4.5104 - accuracy: 0.3006 - val_loss: 1.2534 - val_accuracy: 0.3947
+Epoch 2/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 1.2526 - accuracy: 0.3982 - val_loss: 1.2296 - val_accuracy: 0.4158
+Epoch 3/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 1.1383 - accuracy: 0.4860 - val_loss: 1.1122 - val_accuracy: 0.5474
+Epoch 4/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.9500 - accuracy: 0.6029 - val_loss: 0.9653 - val_accuracy: 0.6316
+Epoch 5/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.7495 - accuracy: 0.6988 - val_loss: 0.7294 - val_accuracy: 0.7105
+Epoch 6/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.5347 - accuracy: 0.7924 - val_loss: 0.6072 - val_accuracy: 0.7895
+Epoch 7/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.3579 - accuracy: 0.8731 - val_loss: 0.3773 - val_accuracy: 0.8632
+Epoch 8/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.3677 - accuracy: 0.8602 - val_loss: 0.3797 - val_accuracy: 0.8526
+Epoch 9/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.2447 - accuracy: 0.8953 - val_loss: 0.3505 - val_accuracy: 0.8737
+Epoch 10/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.2024 - accuracy: 0.9164 - val_loss: 0.3305 - val_accuracy: 0.8526
+Epoch 11/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.1850 - accuracy: 0.9216 - val_loss: 0.2473 - val_accuracy: 0.9105
+Epoch 12/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.1755 - accuracy: 0.9310 - val_loss: 0.4974 - val_accuracy: 0.8105
+Epoch 13/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.1600 - accuracy: 0.9275 - val_loss: 0.2300 - val_accuracy: 0.9158
+Epoch 14/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.1496 - accuracy: 0.9333 - val_loss: 0.2572 - val_accuracy: 0.9000
+Epoch 15/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.1250 - accuracy: 0.9421 - val_loss: 0.1927 - val_accuracy: 0.9368
+Epoch 16/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.1280 - accuracy: 0.9415 - val_loss: 0.2959 - val_accuracy: 0.9000
+Epoch 17/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.1267 - accuracy: 0.9404 - val_loss: 0.2152 - val_accuracy: 0.9105
+Epoch 18/20
+1710/1710 [==============================] - 4s 2ms/sample - loss: 0.1234 - accuracy: 0.9444 - val_loss: 0.2077 - val_accuracy: 0.9158
+Epoch 19/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.1473 - accuracy: 0.9415 - val_loss: 0.2002 - val_accuracy: 0.9263
+Epoch 20/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.5127 - accuracy: 0.8023 - val_loss: 0.2726 - val_accuracy: 0.8842
+Testing on unseen data:
+104/104 [==============================] - 0s 690us/sample - loss: 0.2074 - accuracy: 0.9038
 Saved model to disk
