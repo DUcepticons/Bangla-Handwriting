@@ -14,7 +14,7 @@ import tensorflow as tf
 from tensorflow.keras import layers,Sequential,optimizers
 '''Setting up the env'''
   
-TRAIN_DIR = 'Categorized-Dataset-with-Label/j'
+TRAIN_DIR = 'D:\Github Projects\Bangla-Handwriting\Datasets\Categorized-Dataset-with-Label\j'
 TEST_DIR = 'Generated-Dataset/Test'
 
 LR = 1e-3
@@ -102,11 +102,11 @@ model.compile(optimizer='adam',
               loss='categorical_crossentropy',
               metrics=['accuracy'])
 
-history = model.fit(tr_img_data, tr_lbl_data, epochs=100)
+history = model.fit(tr_img_data, tr_lbl_data, epochs=1)
 
 
 
 
 model.summary()
-model.save('letter-models/j.hdf5')
+model.save('ajaira.h5')
 print("Saved model to disk")

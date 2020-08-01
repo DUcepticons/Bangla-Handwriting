@@ -1,0 +1,152 @@
+runfile('D:/Github Projects/Bangla-Handwriting/Letter & Quality separate/simple-cnn-train-quality.py', wdir='D:/Github Projects/Bangla-Handwriting/Letter & Quality separate')
+(2000, 2)
+a
+1900/1900 [==============================] - 2s 954us/sample - loss: 28.3506 - accuracy: 0.2511
+[28.350605950606496, 0.25105262]
+Train on 1710 samples, validate on 190 samples
+Epoch 1/20
+1710/1710 [==============================] - 4s 2ms/sample - loss: 2.2183 - accuracy: 0.3246 - val_loss: 1.3629 - val_accuracy: 0.2842
+Epoch 2/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 1.2012 - accuracy: 0.4392 - val_loss: 1.1306 - val_accuracy: 0.4526
+Epoch 3/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.9342 - accuracy: 0.6251 - val_loss: 0.6200 - val_accuracy: 0.7632
+Epoch 4/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.7888 - accuracy: 0.7047 - val_loss: 0.3921 - val_accuracy: 0.8526
+Epoch 5/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.6588 - accuracy: 0.7222 - val_loss: 0.3537 - val_accuracy: 0.9053
+Epoch 6/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 1.2934 - accuracy: 0.4450 - val_loss: 0.8894 - val_accuracy: 0.6158
+Epoch 7/20
+1710/1710 [==============================] - 4s 2ms/sample - loss: 0.5107 - accuracy: 0.8064 - val_loss: 0.4885 - val_accuracy: 0.8263
+Epoch 8/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.4475 - accuracy: 0.8433 - val_loss: 0.3057 - val_accuracy: 0.8737
+Epoch 9/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.2684 - accuracy: 0.9076 - val_loss: 0.3624 - val_accuracy: 0.8895
+Epoch 10/20
+1710/1710 [==============================] - 4s 2ms/sample - loss: 0.3085 - accuracy: 0.8749 - val_loss: 0.3936 - val_accuracy: 0.9053
+Epoch 11/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.2429 - accuracy: 0.9058 - val_loss: 0.2430 - val_accuracy: 0.9316
+Epoch 12/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.3158 - accuracy: 0.8883 - val_loss: 0.2737 - val_accuracy: 0.8895
+Epoch 13/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.2828 - accuracy: 0.8936 - val_loss: 1.0591 - val_accuracy: 0.5789
+Epoch 14/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.2069 - accuracy: 0.9129 - val_loss: 0.2273 - val_accuracy: 0.9053
+Epoch 15/20
+1710/1710 [==============================] - 4s 2ms/sample - loss: 0.2039 - accuracy: 0.9240 - val_loss: 0.2040 - val_accuracy: 0.9105
+Epoch 16/20
+1710/1710 [==============================] - 4s 2ms/sample - loss: 0.1961 - accuracy: 0.9257 - val_loss: 0.4724 - val_accuracy: 0.8789
+Epoch 17/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.1523 - accuracy: 0.9427 - val_loss: 0.2210 - val_accuracy: 0.9053
+Epoch 18/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.1828 - accuracy: 0.9263 - val_loss: 0.1132 - val_accuracy: 0.9421
+Epoch 19/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.1419 - accuracy: 0.9363 - val_loss: 0.1313 - val_accuracy: 0.9316
+Epoch 20/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.1447 - accuracy: 0.9444 - val_loss: 0.2224 - val_accuracy: 0.9000
+Testing on unseen data:
+100/100 [==============================] - 0s 2ms/sample - loss: 0.1337 - accuracy: 0.9400
+Saved model to disk
+
+runfile('D:/Github Projects/Bangla-Handwriting/Letter & Quality separate/simple-cnn-train-quality.py', wdir='D:/Github Projects/Bangla-Handwriting/Letter & Quality separate')
+(2000, 2)
+b
+1900/1900 [==============================] - 2s 976us/sample - loss: 9.7081 - accuracy: 0.2500
+[9.708091587267424, 0.25]
+Train on 1710 samples, validate on 190 samples
+Epoch 1/20
+1710/1710 [==============================] - 4s 2ms/sample - loss: 2.1498 - accuracy: 0.2743 - val_loss: 1.3479 - val_accuracy: 0.3316
+Epoch 2/20
+1710/1710 [==============================] - 4s 2ms/sample - loss: 1.3961 - accuracy: 0.2602 - val_loss: 1.3876 - val_accuracy: 0.2526
+Epoch 3/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 1.3871 - accuracy: 0.2386 - val_loss: 1.3873 - val_accuracy: 0.2526
+Epoch 4/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 1.3868 - accuracy: 0.2485 - val_loss: 1.3876 - val_accuracy: 0.2105
+Epoch 5/20
+ 600/1710 [=========>....................] - ETA: 2s - loss: 1.3871 - accuracy: 0.2196Traceback (most recent call last):
+
+  File "D:\Github Projects\Bangla-Handwriting\Letter & Quality separate\simple-cnn-train-quality.py", line 59, in <module>
+    validation_split=0.1)
+
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\keras\engine\training.py", line 819, in fit
+    use_multiprocessing=use_multiprocessing)
+
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\keras\engine\training_v2.py", line 342, in fit
+    total_epochs=epochs)
+
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\keras\engine\training_v2.py", line 128, in run_one_epoch
+    batch_outs = execution_function(iterator)
+
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\keras\engine\training_v2_utils.py", line 98, in execution_function
+    distributed_function(input_fn))
+
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\util\nest.py", line 568, in map_structure
+    structure[0], [func(*x) for x in entries],
+
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\util\nest.py", line 568, in <listcomp>
+    structure[0], [func(*x) for x in entries],
+
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\keras\engine\training_v2_utils.py", line 130, in _non_none_constant_value
+    constant_value = tensor_util.constant_value(v)
+
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\framework\tensor_util.py", line 822, in constant_value
+    return tensor.numpy()
+
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\framework\ops.py", line 942, in numpy
+    maybe_arr = self._numpy()  # pylint: disable=protected-access
+
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\framework\ops.py", line 908, in _numpy
+    return self._numpy_internal()
+
+KeyboardInterrupt
+
+
+runfile('D:/Github Projects/Bangla-Handwriting/Letter & Quality separate/simple-cnn-train-quality.py', wdir='D:/Github Projects/Bangla-Handwriting/Letter & Quality separate')
+(2000, 2)
+b
+1900/1900 [==============================] - 2s 968us/sample - loss: 37.0862 - accuracy: 0.2474
+[37.08618373670076, 0.24736843]
+Train on 1710 samples, validate on 190 samples
+Epoch 1/20
+1710/1710 [==============================] - 4s 2ms/sample - loss: 2.5559 - accuracy: 0.2690 - val_loss: 1.3457 - val_accuracy: 0.3263
+Epoch 2/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 1.3654 - accuracy: 0.2696 - val_loss: 1.3571 - val_accuracy: 0.2842
+Epoch 3/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 1.3382 - accuracy: 0.2842 - val_loss: 1.2979 - val_accuracy: 0.3105
+Epoch 4/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 1.3452 - accuracy: 0.2994 - val_loss: 1.2925 - val_accuracy: 0.3526
+Epoch 5/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 1.3237 - accuracy: 0.3368 - val_loss: 1.2527 - val_accuracy: 0.3632
+Epoch 6/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 1.0815 - accuracy: 0.5035 - val_loss: 1.1823 - val_accuracy: 0.4895
+Epoch 7/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 1.2921 - accuracy: 0.3404 - val_loss: 1.3220 - val_accuracy: 0.3053
+Epoch 8/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 1.1790 - accuracy: 0.4322 - val_loss: 0.7509 - val_accuracy: 0.6579
+Epoch 9/20
+1710/1710 [==============================] - 4s 2ms/sample - loss: 0.5599 - accuracy: 0.7772 - val_loss: 0.6789 - val_accuracy: 0.7842
+Epoch 10/20
+1710/1710 [==============================] - 4s 2ms/sample - loss: 0.3548 - accuracy: 0.8754 - val_loss: 0.3517 - val_accuracy: 0.8737
+Epoch 11/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.3505 - accuracy: 0.8708 - val_loss: 0.3266 - val_accuracy: 0.8895
+Epoch 12/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.2111 - accuracy: 0.9368 - val_loss: 0.2419 - val_accuracy: 0.9263
+Epoch 13/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.1633 - accuracy: 0.9526 - val_loss: 0.3006 - val_accuracy: 0.9421
+Epoch 14/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.1320 - accuracy: 0.9480 - val_loss: 0.2504 - val_accuracy: 0.9158
+Epoch 15/20
+1710/1710 [==============================] - 4s 2ms/sample - loss: 0.1540 - accuracy: 0.9462 - val_loss: 0.1785 - val_accuracy: 0.9421
+Epoch 16/20
+1710/1710 [==============================] - 8s 5ms/sample - loss: 0.1739 - accuracy: 0.9374 - val_loss: 0.2602 - val_accuracy: 0.9211
+Epoch 17/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.1199 - accuracy: 0.9550 - val_loss: 0.2940 - val_accuracy: 0.9211
+Epoch 18/20
+1710/1710 [==============================] - 4s 2ms/sample - loss: 0.1163 - accuracy: 0.9585 - val_loss: 0.1595 - val_accuracy: 0.9421
+Epoch 19/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.0727 - accuracy: 0.9702 - val_loss: 0.3547 - val_accuracy: 0.9316
+Epoch 20/20
+1710/1710 [==============================] - 3s 2ms/sample - loss: 0.0957 - accuracy: 0.9596 - val_loss: 0.2264 - val_accuracy: 0.9263
+Testing on unseen data:
+100/100 [==============================] - 0s 2ms/sample - loss: 0.3525 - accuracy: 0.9300
+Saved model to disk
