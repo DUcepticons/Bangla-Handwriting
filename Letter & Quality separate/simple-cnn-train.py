@@ -34,18 +34,18 @@ model.add(layers.MaxPooling2D(pool_size=4))
 model.add(layers.Conv2D(64, kernel_size=5, activation='relu'))
 model.add(layers.MaxPooling2D(pool_size=4))
 model.add(layers.Conv2D(128, kernel_size=5, activation='relu'))
-model.add(layers.MaxPooling2D(pool_size=4))
+model.add(layers.MaxPooling2D(pool_size=5))
 #model.add(layers.Dropout(0.25))
 model.add(layers.Flatten())
 model.add(layers.Dense(512,activation='relu'))
 #model.add(layers.Dropout(0.5))
 model.add(layers.Dense(256,activation='relu'))
 model.add(layers.Dense(11,activation='softmax'))
+model.summary()
 
 
 
-
-optimizer=optimizers.Adam(lr=1e-3)
+optimizer=optimizers.Adam(lr=1e-4)
 model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
 
   
@@ -55,7 +55,7 @@ y_train = tr_lbl_data
 
 
 print(model.evaluate(x_train, y_train, batch_size=batch_size, verbose=1))
-model.fit(x_train, y_train, epochs=10 , batch_size=batch_size, shuffle=False, 
+model.fit(x_train, y_train, epochs=20 , batch_size=batch_size, shuffle=False, 
           validation_split=0.1)
 
 

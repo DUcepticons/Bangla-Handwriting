@@ -39,7 +39,7 @@ for quality_data in os.listdir(LOCATION):
     model.add(layers.Conv2D(64, kernel_size=5, activation='relu'))
     model.add(layers.MaxPooling2D(pool_size=4))
     model.add(layers.Conv2D(128, kernel_size=5, activation='relu'))
-    model.add(layers.MaxPooling2D(pool_size=4))
+    model.add(layers.MaxPooling2D(pool_size=5))
     #model.add(layers.Dropout(0.25))
     model.add(layers.Flatten())
     model.add(layers.Dense(512,activation='relu'))
@@ -47,9 +47,9 @@ for quality_data in os.listdir(LOCATION):
     model.add(layers.Dense(256,activation='relu'))
     model.add(layers.Dense(64,activation='relu'))
     model.add(layers.Dense(num_classes,activation='softmax'))
+    #model.summary()
     
-    
-    optimizer=optimizers.Adam(lr=1e-3)
+    optimizer=optimizers.Adam(lr=1e-4)
     model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
         
     x_train = tr_img_data
