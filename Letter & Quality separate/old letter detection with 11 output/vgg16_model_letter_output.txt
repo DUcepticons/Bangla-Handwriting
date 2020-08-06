@@ -1,0 +1,16 @@
+runfile('D:/Github Projects/Bangla-Handwriting/Letter & Quality separate/vgg16-train.py', wdir='D:/Github Projects/Bangla-Handwriting/Letter & Quality separate')
+(6677, 2)
+Train on 5760 samples, validate on 640 samples
+Epoch 1/5
+5760/5760 [==============================] - 148s 26ms/sample - loss: 1.3435 - accuracy: 0.5188 - val_loss: 0.2092 - val_accuracy: 0.9062
+Epoch 2/5
+5760/5760 [==============================] - 147s 26ms/sample - loss: 0.1671 - accuracy: 0.9375 - val_loss: 0.1421 - val_accuracy: 0.9609
+Epoch 3/5
+5760/5760 [==============================] - 145s 25ms/sample - loss: 0.0936 - accuracy: 0.9660 - val_loss: 0.1174 - val_accuracy: 0.9703
+Epoch 4/5
+5760/5760 [==============================] - 146s 25ms/sample - loss: 0.0614 - accuracy: 0.9825 - val_loss: 0.1218 - val_accuracy: 0.9656
+Epoch 5/5
+5760/5760 [==============================] - 143s 25ms/sample - loss: 0.0913 - accuracy: 0.9750 - val_loss: 0.0162 - val_accuracy: 0.9937
+Testing on unseen data:
+277/277 [==============================] - 4s 16ms/sample - loss: 0.0252 - accuracy: 0.9928
+Saved model to disk

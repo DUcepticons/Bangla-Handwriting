@@ -19,17 +19,18 @@ LR = 1e-3
 '''Labelling the dataset'''
 def label_img(word_label): 
 
-    if   word_label == 'a': return [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
-    elif word_label == 'b': return [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
-    elif word_label == 'c': return [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0] 
-    elif word_label == 'd': return [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] 
-    elif word_label == 'e': return [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0] 
-    elif word_label == 'f': return [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0] 
-    elif word_label == 'g': return [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0] 
-    elif word_label == 'h': return [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] 
-    elif word_label == 'i': return [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0] 
-    elif word_label == 'j': return [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] 
-    elif word_label == 'k': return [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1] 
+    if   word_label == 'a': return [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
+    elif word_label == 'b': return [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
+    elif word_label == 'c': return [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
+    elif word_label == 'd': return [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0] 
+    elif word_label == 'e': return [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] 
+    elif word_label == 'f': return [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0] 
+    elif word_label == 'g': return [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0] 
+    elif word_label == 'h': return [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0] 
+    elif word_label == 'i': return [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] 
+    elif word_label == 'j': return [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0] 
+    elif word_label == 'k': return [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] 
+    elif word_label == 'x': return [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1] 
     
 data=[]
   

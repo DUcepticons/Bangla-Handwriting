@@ -7,9 +7,9 @@ import tensorflow as tf
 from tensorflow.keras import layers,Sequential,optimizers,applications, Model, applications 
 from tensorflow.keras.preprocessing import image
 
-num_classes=11
+num_classes=12
 batch_size = 8 #more means better faster convergence but takes more resources
-train_data_num = 6400 #change it accordingly
+train_data_num = 6850 #change it accordingly
 
 
 data= np.load('augmented_data_mini_letter.npy', allow_pickle=True)
@@ -34,12 +34,13 @@ x = layers.GlobalMaxPooling2D()(x)
 x = layers.Dense(512, activation='relu')(x)
 predictions = layers.Dense(num_classes, activation='softmax')(x)
 model = Model(inputs=base_model.input, outputs=predictions)
+#model.summary()
 
 for layer in base_model.layers:
     layer.trainable = False
 
 
-optimizer=optimizers.Adam(lr=1e-3)
+optimizer=optimizers.Adam(lr=1e-4)
 model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
 
   
@@ -70,7 +71,7 @@ model.fit(x_train, y_train, epochs=2 , batch_size=batch_size, shuffle=False,
 for layer in model.layers:
     layer.trainable = True
 
-optimizer2=optimizers.Adam(lr=1e-4)
+optimizer2=optimizers.Adam(lr=5e-5)
 model.compile(optimizer=optimizer2, loss='categorical_crossentropy', metrics=['accuracy'])
 model.fit(x_train, y_train, epochs=3 , batch_size=batch_size, shuffle=False, 
           validation_split=0.1) #will try with 5 epochs later
@@ -80,7 +81,6 @@ print('Testing on unseen data:')
 x_test = applications.resnet.preprocess_input(tst_img_data)
 y_test = tst_lbl_data
 test_loss, test_acc = model.evaluate(x_test,  y_test, verbose=1)
-#model.summary()
 
 
 model.save('resnet50_model.h5')

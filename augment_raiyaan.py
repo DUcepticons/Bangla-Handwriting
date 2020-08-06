@@ -12,7 +12,7 @@ import numpy as np
 from random import shuffle 
 from tqdm import tqdm 
 
-LOCATION = 'Bangla Handwriting Dataset - Augmented Mini'
+LOCATION = 'D:\Github Projects\Bangla-Handwriting\Datasets\yo'
 
 # Creating an empty list where we should store the training data 
 # after a little preprocessing of the data 
@@ -33,4 +33,4 @@ for letterfolder in os.listdir(LOCATION):
         p.random_brightness(probability=0.8,min_factor=0.8,max_factor=1.3)
         p.random_contrast(probability=0.8,min_factor=0.5,max_factor=1.5)
         
-        p.sample(120)
+        p.sample(501)
