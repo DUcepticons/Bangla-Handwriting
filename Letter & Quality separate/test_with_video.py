@@ -52,69 +52,72 @@ def quality_assessment():
 def a():
     print("অ")
     global quality_model 
-    quality_model = tf.keras.models.load_model("a_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("models/a_vgg16_model.h5")
     quality_assessment()
     
 def b():
     print("আ")
     global quality_model 
-    quality_model = tf.keras.models.load_model("b_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("models/b_vgg16_model.h5")
     quality_assessment()
     
 def c():
     print("ই")
     global quality_model 
-    quality_model = tf.keras.models.load_model("c_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("models/c_vgg16_model.h5")
     quality_assessment()
     
 def d():
     print("ঈ")
     global quality_model 
-    quality_model = tf.keras.models.load_model("d_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("models/d_vgg16_model.h5")
     quality_assessment()
     
 def e():
     print("উ")
     global quality_model 
-    quality_model = tf.keras.models.load_model("e_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("models/e_vgg16_model.h5")
     quality_assessment()
     
 def f():
     print("ঊ")
     global quality_model 
-    quality_model = tf.keras.models.load_model("f_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("models/f_vgg16_model.h5")
     quality_assessment()
     
 def g():
     print("ঋ")
     global quality_model 
-    quality_model = tf.keras.models.load_model("g_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("models/g_vgg16_model.h5")
     quality_assessment()
     
 def h():
     print("এ")
     global quality_model 
-    quality_model = tf.keras.models.load_model("h_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("models/h_vgg16_model.h5")
     quality_assessment()
     
 def i():
     print("ঐ")
     global quality_model 
-    quality_model = tf.keras.models.load_model("i_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("models/i_vgg16_model.h5")
     quality_assessment()
     
 def j():
     print("ও")
     global quality_model 
-    quality_model = tf.keras.models.load_model("j_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("models/j_vgg16_model.h5")
     quality_assessment()
     
 def k():
     print("ঔ")
     global quality_model 
-    quality_model = tf.keras.models.load_model("k_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("models/k_vgg16_model.h5")
     quality_assessment()    
 
+def x():
+    print("No letter has been found")
+  
 
 def switch(letter_index):
     switcher = {
@@ -128,7 +131,8 @@ def switch(letter_index):
         7: h,
         8: i,
         9: j,
-        10: k
+        10: k,
+        11: x
     }
     func = switcher.get(letter_index, lambda: print("Character not recognized"))
     func()
@@ -139,13 +143,15 @@ def switch(letter_index):
 path= "C:\\Users\\Riad\\Documents\\GitHub\\Bangla-Handwriting\\Datasets\\Categorized-Dataset-with-Label\\a\\0.9\\"
 
 # load model
-model = load_model("vgg16_model_letter.h5")
+model = load_model("models/vgg16_model_letter.h5")
 
 print("Loaded model from disk")
 
-url = "http://192.168.1.34:4747" # Your url might be different, check the app
+'''
+url = "http://192.168.0.100:4747" # Your url might be different, check the app
 cam = cv2.VideoCapture(url+"/video")
-
+'''
+cam = cv2.VideoCapture(0)
 while(True):
     _,frame=cam.read()
     img = cv2.resize(frame, (224, 224)) 

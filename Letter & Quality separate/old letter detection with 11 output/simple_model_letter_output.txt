@@ -1,0 +1,48 @@
+runfile('D:/Github Projects/Bangla-Handwriting/Letter & Quality separate/simple-cnn-train.py', wdir='D:/Github Projects/Bangla-Handwriting/Letter & Quality separate')
+(6677, 2)
+6400/6400 [==============================] - 5s 812us/sample - loss: 16.0853 - accuracy: 0.0909
+[16.08532919406891, 0.0909375]
+Train on 5760 samples, validate on 640 samples
+Epoch 1/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 2.4514 - accuracy: 0.2210 - val_loss: 1.7520 - val_accuracy: 0.3953
+Epoch 2/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 1.3474 - accuracy: 0.5531 - val_loss: 1.2133 - val_accuracy: 0.5797
+Epoch 3/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 0.7944 - accuracy: 0.7391 - val_loss: 1.1481 - val_accuracy: 0.6109
+Epoch 4/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 0.5243 - accuracy: 0.8299 - val_loss: 0.7600 - val_accuracy: 0.7578
+Epoch 5/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 0.3670 - accuracy: 0.8814 - val_loss: 0.4879 - val_accuracy: 0.8562
+Epoch 6/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 0.3014 - accuracy: 0.9040 - val_loss: 0.4821 - val_accuracy: 0.8438
+Epoch 7/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 0.2201 - accuracy: 0.9267 - val_loss: 0.2689 - val_accuracy: 0.9125
+Epoch 8/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 0.1536 - accuracy: 0.9493 - val_loss: 0.3748 - val_accuracy: 0.8922
+Epoch 9/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 0.1557 - accuracy: 0.9500 - val_loss: 0.5078 - val_accuracy: 0.8641
+Epoch 10/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 0.1438 - accuracy: 0.9517 - val_loss: 0.2893 - val_accuracy: 0.9156
+Epoch 11/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 0.1125 - accuracy: 0.9639 - val_loss: 0.4073 - val_accuracy: 0.8953
+Epoch 12/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 0.1029 - accuracy: 0.9675 - val_loss: 0.2958 - val_accuracy: 0.9141
+Epoch 13/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 0.1082 - accuracy: 0.9639 - val_loss: 0.2731 - val_accuracy: 0.9312
+Epoch 14/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 0.0757 - accuracy: 0.9759 - val_loss: 0.3328 - val_accuracy: 0.9328
+Epoch 15/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 0.0900 - accuracy: 0.9719 - val_loss: 0.2646 - val_accuracy: 0.9328
+Epoch 16/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 0.0772 - accuracy: 0.9760 - val_loss: 0.2631 - val_accuracy: 0.9391
+Epoch 17/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 0.0818 - accuracy: 0.9743 - val_loss: 0.2400 - val_accuracy: 0.9391
+Epoch 18/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 0.0748 - accuracy: 0.9793 - val_loss: 0.3620 - val_accuracy: 0.8984
+Epoch 19/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 0.0365 - accuracy: 0.9887 - val_loss: 0.2508 - val_accuracy: 0.9328
+Epoch 20/20
+5760/5760 [==============================] - 11s 2ms/sample - loss: 0.0893 - accuracy: 0.9757 - val_loss: 0.3086 - val_accuracy: 0.9187
+Testing on unseen data:
+277/277 [==============================] - 0s 1ms/sample - loss: 0.2702 - accuracy: 0.9242
+Saved model to disk

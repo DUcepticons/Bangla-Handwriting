@@ -7,9 +7,9 @@ import tensorflow as tf
 from tensorflow.keras import layers,Sequential,optimizers,applications, Model, applications 
 from tensorflow.keras.preprocessing import image
 
-num_classes=11
+num_classes=12
 batch_size = 8 #more means better faster convergence but takes more resources
-train_data_num = 6400 #change it accordingly
+train_data_num = 6850 #change it accordingly
 
 
 data= np.load('augmented_data_mini_letter.npy', allow_pickle=True)
@@ -40,12 +40,12 @@ model.add(layers.Flatten())
 model.add(layers.Dense(512,activation='relu'))
 #model.add(layers.Dropout(0.5))
 model.add(layers.Dense(256,activation='relu'))
-model.add(layers.Dense(11,activation='softmax'))
-model.summary()
+model.add(layers.Dense(num_classes,activation='softmax'))
+#model.summary()
 
 
 
-optimizer=optimizers.Adam(lr=1e-4)
+optimizer=optimizers.Adam(lr=5e-5)
 model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
 
   
