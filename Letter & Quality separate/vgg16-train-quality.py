@@ -37,45 +37,25 @@ for quality_data in os.listdir(LOCATION):
     x = layers.Dense(64, activation='relu')(x)
     predictions = layers.Dense(num_classes, activation='softmax')(x)
     model = Model(inputs=base_model.input, outputs=predictions)
-    model.summary()
+    #model.summary()
     
-    for layer in base_model.layers:
-        layer.trainable = False
-    
-    
-    optimizer=optimizers.Adam(lr=1e-3)
-    model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
+
         
     x_train = applications.vgg16.preprocess_input(tr_img_data)
     y_train = tr_lbl_data
-    
-    '''
-    model.add(layers.InputLayer(input_shape=[224,224,3]))
-    model.add(layers.Conv2D(32, kernel_size=5, activation='relu'))
-    model.add(layers.MaxPooling2D(pool_size=3))
-    model.add(layers.Conv2D(64, kernel_size=5, activation='relu'))
-    model.add(layers.MaxPooling2D(pool_size=5))
-    model.add(layers.Conv2D(128, kernel_size=5, activation='relu'))
-    model.add(layers.MaxPooling2D(pool_size=5))
-    #model.add(layers.Dropout(0.25))
-    model.add(layers.Flatten())
-    model.add(layers.Dense(512,activation='relu'))
-    #model.add(layers.Dropout(0.5))
-    model.add(layers.Dense(256,activation='relu'))
-    '''
-    print(quality_data[0])
-    print(model.evaluate(x_train, y_train, batch_size=batch_size, verbose=1))
-    model.fit(x_train, y_train, epochs=8 , batch_size=batch_size, shuffle=False, 
-              validation_split=0.1)
+
+
     
  
     #unfreezing all layers and retraining with low learning rate
     for layer in model.layers:
         layer.trainable = True
     
-    optimizer2=optimizers.Adam(lr=1e-4)
-    model.compile(optimizer=optimizer2, loss='categorical_crossentropy', metrics=['accuracy'])
-    model.fit(x_train, y_train, epochs=15 , batch_size=batch_size, shuffle=False, 
+    print(quality_data[0])
+    
+    optimizer=optimizers.Adam(lr=1e-4)
+    model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
+    model.fit(x_train, y_train, epochs=20 , batch_size=batch_size, shuffle=False, 
               validation_split=0.1) #will try with 5 epochs later
 
   
@@ -84,7 +64,7 @@ for quality_data in os.listdir(LOCATION):
     x_test = applications.vgg16.preprocess_input(tst_img_data)
     y_test = tst_lbl_data
     test_loss, test_acc = model.evaluate(x_test,  y_test, verbose=1)
-    model.summary()
+    #model.summary()
     
     
     model.save(quality_data[0]+'_vgg16_model.h5')
