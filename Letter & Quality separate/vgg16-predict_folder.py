@@ -51,67 +51,67 @@ def quality_assessment():
 def a():
     print("অ")
     global quality_model 
-    quality_model = tf.keras.models.load_model("letter-models/vgg16/a_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("a_vgg16_model.h5")
     quality_assessment()
     
 def b():
     print("আ")
     global quality_model 
-    quality_model = tf.keras.models.load_model("letter-models/vgg16/b_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("b_vgg16_model.h5")
     quality_assessment()
     
 def c():
     print("ই")
     global quality_model 
-    quality_model = tf.keras.models.load_model("letter-models/vgg16/c_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("c_vgg16_model.h5")
     quality_assessment()
     
 def d():
     print("ঈ")
     global quality_model 
-    quality_model = tf.keras.models.load_model("letter-models/vgg16/d_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("d_vgg16_model.h5")
     quality_assessment()
     
 def e():
     print("উ")
     global quality_model 
-    quality_model = tf.keras.models.load_model("letter-models/vgg16/e_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("e_vgg16_model.h5")
     quality_assessment()
     
 def f():
     print("ঊ")
     global quality_model 
-    quality_model = tf.keras.models.load_model("letter-models/vgg16/f_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("f_vgg16_model.h5")
     quality_assessment()
     
 def g():
     print("ঋ")
     global quality_model 
-    quality_model = tf.keras.models.load_model("letter-models/vgg16/g_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("g_vgg16_model.h5")
     quality_assessment()
     
 def h():
     print("এ")
     global quality_model 
-    quality_model = tf.keras.models.load_model("letter-models/vgg16/h_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("h_vgg16_model.h5")
     quality_assessment()
     
 def i():
     print("ঐ")
     global quality_model 
-    quality_model = tf.keras.models.load_model("letter-models/vgg16/i_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("i_vgg16_model.h5")
     quality_assessment()
     
 def j():
     print("ও")
     global quality_model 
-    quality_model = tf.keras.models.load_model("letter-models/vgg16/j_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("j_vgg16_model.h5")
     quality_assessment()
     
 def k():
     print("ঔ")
     global quality_model 
-    quality_model = tf.keras.models.load_model("letter-models/vgg16/k_vgg16_model.h5")
+    quality_model = tf.keras.models.load_model("k_vgg16_model.h5")
     quality_assessment()    
 
 
@@ -135,7 +135,7 @@ def switch(letter_index):
 
 #main code 
     
-path= 'D:/Github Projects/Bangla-Handwriting/Datasets/Categorized-Dataset-with-Label/d/0.8/'
+path= "C:\\Users\\Riad\\Documents\\GitHub\\Bangla-Handwriting\\Datasets\\Categorized-Dataset-with-Label\\a\\0.9\\"
 
 # load model
 model = load_model("vgg16_model_letter.h5")
