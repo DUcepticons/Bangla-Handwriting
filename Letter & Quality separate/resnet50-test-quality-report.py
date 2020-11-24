@@ -10,8 +10,8 @@ from tensorflow.keras.models import model_from_json, load_model
 import csv
 
 num_classes=4
-batch_size = 8 #more means better faster convergence but takes more resources
-train_data_num = 1900 #change it accordingly
+batch_size = 16 #more means better faster convergence but takes more resources
+train_data_num = 7000 #change it accordingly
 
 quality_array=[0.6,0.7,0.8,0.9]
 
@@ -34,7 +34,7 @@ for quality_data in os.listdir(LOCATION):
     tst_lbl_data = lbl_data[train_data_num:,:]
     
     
-    model = load_model('letter-models/resnet50/'+quality_data[0]+'_resnet_model.h5')
+    model = load_model('models/'+quality_data[0]+'_resnet50_model.h5')
 
     print('Testing on unseen data:')
     x_test = applications.resnet.preprocess_input(tst_img_data)

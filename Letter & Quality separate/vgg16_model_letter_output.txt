@@ -1,15 +1,16 @@
-(7284, 2)
-Train on 6165 samples, validate on 685 samples
+runfile('D:/Github Projects/Bangla-Handwriting/Letter & Quality separate/vgg16-train.py', wdir='D:/Github Projects/Bangla-Handwriting/Letter & Quality separate')
+(14430, 2)
+Train on 10800 samples, validate on 1200 samples
 Epoch 1/5
-6165/6165 [==============================] - 170s 28ms/sample - loss: 0.5852 - accuracy: 0.8297 - val_loss: 0.0595 - val_accuracy: 0.97967645
+10800/10800 [==============================] - 278s 26ms/sample - loss: 0.8584 - accuracy: 0.7184 - val_loss: 0.3410 - val_accuracy: 0.8933
 Epoch 2/5
-6165/6165 [==============================] - 158s 26ms/sample - loss: 0.0588 - accuracy: 0.9807 - val_loss: 0.0251 - val_accuracy: 0.9942
+10800/10800 [==============================] - 266s 25ms/sample - loss: 0.1791 - accuracy: 0.9466 - val_loss: 0.1727 - val_accuracy: 0.9492
 Epoch 3/5
-6165/6165 [==============================] - 163s 26ms/sample - loss: 0.0376 - accuracy: 0.9880 - val_loss: 0.2991 - val_accuracy: 0.9182
+10800/10800 [==============================] - 266s 25ms/sample - loss: 0.1150 - accuracy: 0.9668 - val_loss: 0.1026 - val_accuracy: 0.9758
 Epoch 4/5
-6165/6165 [==============================] - 160s 26ms/sample - loss: 0.0652 - accuracy: 0.9849 - val_loss: 0.0249 - val_accuracy: 0.9912
+10800/10800 [==============================] - 266s 25ms/sample - loss: 0.0833 - accuracy: 0.9762 - val_loss: 0.1062 - val_accuracy: 0.9733- ETA: 1:20 - loss: 0.0840 - accuracy: 0.9766
 Epoch 5/5
-6165/6165 [==============================] - 158s 26ms/sample - loss: 0.0396 - accuracy: 0.9899 - val_loss: 0.1412 - val_accuracy: 0.9547
+10800/10800 [==============================] - 266s 25ms/sample - loss: 0.0799 - accuracy: 0.9773 - val_loss: 0.1415 - val_accuracy: 0.9667
 Testing on unseen data:
-434/434 [==============================] - 5s 12ms/sample - loss: 0.1332 - accuracy: 0.9677
+2430/2430 [==============================] - 18s 7ms/sample - loss: 0.1403 - accuracy: 0.9617
 Saved model to disk

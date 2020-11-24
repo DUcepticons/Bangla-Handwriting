@@ -9,7 +9,7 @@ from tensorflow.keras.preprocessing import image
 
 num_classes=12
 batch_size = 8 #more means better faster convergence but takes more resources
-train_data_num = 6850 #change it accordingly
+train_data_num = 14000 #change it accordingly
 
 
 data= np.load('augmented_data_mini_letter.npy', allow_pickle=True)
@@ -55,7 +55,7 @@ y_train = tr_lbl_data
 
 
 print(model.evaluate(x_train, y_train, batch_size=batch_size, verbose=1))
-model.fit(x_train, y_train, epochs=20 , batch_size=batch_size, shuffle=False, 
+model.fit(x_train, y_train, epochs=40 , batch_size=batch_size, shuffle=False, 
           validation_split=0.1)
 
 

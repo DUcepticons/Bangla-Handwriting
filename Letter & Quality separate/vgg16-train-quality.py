@@ -8,8 +8,8 @@ from tensorflow.keras import layers,Sequential,optimizers,applications, Model, a
 from tensorflow.keras.preprocessing import image
 
 num_classes=4
-batch_size = 8 #more means better faster convergence but takes more resources
-train_data_num = 1900 #change it accordingly
+batch_size = 16 #more means better faster convergence but takes more resources
+train_data_num = 7000 #change it accordingly
 
 LOCATION='D:\Github Projects\Bangla-Handwriting\Letter & Quality separate\quality-data'
 
@@ -53,9 +53,9 @@ for quality_data in os.listdir(LOCATION):
     
     print(quality_data[0])
     
-    optimizer=optimizers.Adam(lr=1e-4)
+    optimizer=optimizers.Adam(lr=5e-5)
     model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
-    model.fit(x_train, y_train, epochs=20 , batch_size=batch_size, shuffle=False, 
+    model.fit(x_train, y_train, epochs=10 , batch_size=batch_size, shuffle=False, 
               validation_split=0.1) #will try with 5 epochs later
 
   

@@ -8,8 +8,8 @@ from tensorflow.keras import layers,Sequential,optimizers,applications, Model, a
 from tensorflow.keras.preprocessing import image
 
 num_classes=12
-batch_size = 8 #more means better faster convergence but takes more resources
-train_data_num = 6850 #change it accordingly
+batch_size = 16 #more means better faster convergence but takes more resources
+train_data_num = 14000 #change it accordingly
 
 
 data= np.load('augmented_data_mini_letter.npy', allow_pickle=True)
@@ -40,7 +40,7 @@ for layer in base_model.layers:
     layer.trainable = False
 
 
-optimizer=optimizers.Adam(lr=1e-4)
+optimizer=optimizers.Adam(lr=1e-5)
 model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
 
   
@@ -62,7 +62,7 @@ model.add(layers.Dense(512,activation='relu'))
 model.add(layers.Dense(256,activation='relu'))
 '''
 
-print(model.evaluate(x_train, y_train, batch_size=batch_size, verbose=1))
+#print(model.evaluate(x_train, y_train, batch_size=batch_size, verbose=1))
 model.fit(x_train, y_train, epochs=2 , batch_size=batch_size, shuffle=False, 
           validation_split=0.1)
 
@@ -73,7 +73,7 @@ for layer in model.layers:
 
 optimizer2=optimizers.Adam(lr=5e-5)
 model.compile(optimizer=optimizer2, loss='categorical_crossentropy', metrics=['accuracy'])
-model.fit(x_train, y_train, epochs=3 , batch_size=batch_size, shuffle=False, 
+model.fit(x_train, y_train, epochs=5 , batch_size=batch_size, shuffle=False, 
           validation_split=0.1) #will try with 5 epochs later
 
 

@@ -12,7 +12,7 @@ tf.random.set_seed(1)
 
 num_classes=4
 batch_size = 8 #more means better faster convergence but takes more resources
-train_data_num = 1900 #change it accordingly
+train_data_num = 7000 #change it accordingly
 
 LOCATION='D:\Github Projects\Bangla-Handwriting\Letter & Quality separate\quality-data'
 
@@ -49,7 +49,7 @@ for quality_data in os.listdir(LOCATION):
     model.add(layers.Dense(num_classes,activation='softmax'))
     #model.summary()
     
-    optimizer=optimizers.Adam(lr=1e-4)
+    optimizer=optimizers.Adam(lr=5e-5)
     model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
         
     x_train = tr_img_data
@@ -58,7 +58,7 @@ for quality_data in os.listdir(LOCATION):
 
     print(quality_data[0])
     print(model.evaluate(x_train, y_train, batch_size=batch_size, verbose=1))
-    model.fit(x_train, y_train, epochs=20 , batch_size=batch_size, shuffle=False, 
+    model.fit(x_train, y_train, epochs=30 , batch_size=batch_size, shuffle=False, 
               validation_split=0.1)
     
  
