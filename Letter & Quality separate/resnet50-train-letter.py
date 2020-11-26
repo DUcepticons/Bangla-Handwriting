@@ -83,6 +83,6 @@ y_test = tst_lbl_data
 test_loss, test_acc = model.evaluate(x_test,  y_test, verbose=1)
 
 
-model.save('resnet50_model.h5')
+model.save('resnet50_model_letter.h5')
 
 print("Saved model to disk")

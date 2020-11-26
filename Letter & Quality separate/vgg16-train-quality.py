@@ -53,9 +53,9 @@ for quality_data in os.listdir(LOCATION):
     
     print(quality_data[0])
     
-    optimizer=optimizers.Adam(lr=5e-5)
+    optimizer=optimizers.Adam(lr=2e-5)
     model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
-    model.fit(x_train, y_train, epochs=10 , batch_size=batch_size, shuffle=False, 
+    model.fit(x_train, y_train, epochs=18 , batch_size=batch_size, shuffle=False, 
               validation_split=0.1) #will try with 5 epochs later
 
   

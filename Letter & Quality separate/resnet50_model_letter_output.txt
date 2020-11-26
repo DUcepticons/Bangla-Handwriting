@@ -1,21 +1,25 @@
-runfile('D:/Github Projects/Bangla-Handwriting/Letter & Quality separate/resnet50-train.py', wdir='D:/Github Projects/Bangla-Handwriting/Letter & Quality separate')
-(14430, 2)
-Train on 10800 samples, validate on 1200 samples
+(16709, 2)
+A local file was found, but it seems to be incomplete or outdated because the md5 file hash does not match the original value of a268eb855778b3df3c7506639542a6af so we will re-download the data.
+Downloading data from https://github.com/fchollet/deep-learning-models/releases/download/v0.2/resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5
+94658560/94653016 [==============================] - 1s 0us/step
+Train on 12600 samples, validate on 1400 samples
 Epoch 1/2
-10800/10800 [==============================] - 80s 7ms/sample - loss: 4.5615 - accuracy: 0.1881 - val_loss: 4.0900 - val_accuracy: 0.2200
+12600/12600 [==============================] - 198s 16ms/step - loss: 4.6589 - accuracy: 0.1740 - val_loss: 3.9747 - val_accuracy: 0.1779
 Epoch 2/2
-10800/10800 [==============================] - 67s 6ms/sample - loss: 2.7160 - accuracy: 0.3359 - val_loss: 3.3204 - val_accuracy: 0.2867
-Train on 10800 samples, validate on 1200 samples
+12600/12600 [==============================] - 171s 14ms/step - loss: 2.7546 - accuracy: 0.3261 - val_loss: 3.2957 - val_accuracy: 0.2414
+Train on 12600 samples, validate on 1400 samples
 Epoch 1/5
-10800/10800 [==============================] - 185s 17ms/sample - loss: 0.7038 - accuracy: 0.8032 - val_loss: 0.2106 - val_accuracy: 0.9392
+12600/12600 [==============================] - 734s 58ms/step - loss: 0.6310 - accuracy: 0.8242 - val_loss: 0.1965 - val_accuracy: 0.9421
 Epoch 2/5
-10800/10800 [==============================] - 172s 16ms/sample - loss: 0.0515 - accuracy: 0.9840 - val_loss: 0.1067 - val_accuracy: 0.9708
+12600/12600 [==============================] - 705s 56ms/step - loss: 0.0537 - accuracy: 0.9832 - val_loss: 0.1296 - val_accuracy: 0.9643
 Epoch 3/5
-10800/10800 [==============================] - 172s 16ms/sample - loss: 0.0199 - accuracy: 0.9938 - val_loss: 0.1210 - val_accuracy: 0.9675
+12600/12600 [==============================] - 705s 56ms/step - loss: 0.0269 - accuracy: 0.9913 - val_loss: 0.0760 - val_accuracy: 0.9793
 Epoch 4/5
-10800/10800 [==============================] - 172s 16ms/sample - loss: 0.0493 - accuracy: 0.9871 - val_loss: 0.2564 - val_accuracy: 0.9442
+12600/12600 [==============================] - 701s 56ms/step - loss: 0.0362 - accuracy: 0.9890 - val_loss: 0.0881 - val_accuracy: 0.9736
 Epoch 5/5
-10800/10800 [==============================] - 173s 16ms/sample - loss: 0.0874 - accuracy: 0.9764 - val_loss: 0.1539 - val_accuracy: 0.9650
+12600/12600 [==============================] - 696s 55ms/step - loss: 0.0603 - accuracy: 0.9828 - val_loss: 0.1187 - val_accuracy: 0.9821
 Testing on unseen data:
-2430/2430 [==============================] - 13s 5ms/sample - loss: 0.1272 - accuracy: 0.9745
+2709/2709 [==============================] - 33s 12ms/step
 Saved model to disk
+loss: 0.15207235709078185
+accuracy: 0.9748984575271606
