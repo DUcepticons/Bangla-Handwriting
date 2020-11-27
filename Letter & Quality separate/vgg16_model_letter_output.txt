@@ -1,16 +1,15 @@
-runfile('D:/Github Projects/Bangla-Handwriting/Letter & Quality separate/vgg16-train.py', wdir='D:/Github Projects/Bangla-Handwriting/Letter & Quality separate')
-(14430, 2)
+(16709, 2)
 Train on 10800 samples, validate on 1200 samples
 Epoch 1/5
-10800/10800 [==============================] - 278s 26ms/sample - loss: 0.8584 - accuracy: 0.7184 - val_loss: 0.3410 - val_accuracy: 0.8933
+10800/10800 [==============================] - 274s 25ms/sample - loss: 1.2911 - accuracy: 0.5474 - val_loss: 0.2325 - val_accuracy: 0.9342
 Epoch 2/5
-10800/10800 [==============================] - 266s 25ms/sample - loss: 0.1791 - accuracy: 0.9466 - val_loss: 0.1727 - val_accuracy: 0.9492
+10800/10800 [==============================] - 264s 24ms/sample - loss: 0.1944 - accuracy: 0.9415 - val_loss: 0.0974 - val_accuracy: 0.9708A: 21s - loss: 0.2044 - accuracy: 0.9383
 Epoch 3/5
-10800/10800 [==============================] - 266s 25ms/sample - loss: 0.1150 - accuracy: 0.9668 - val_loss: 0.1026 - val_accuracy: 0.9758
+10800/10800 [==============================] - 264s 24ms/sample - loss: 0.1262 - accuracy: 0.9632 - val_loss: 0.1031 - val_accuracy: 0.9717
 Epoch 4/5
-10800/10800 [==============================] - 266s 25ms/sample - loss: 0.0833 - accuracy: 0.9762 - val_loss: 0.1062 - val_accuracy: 0.9733- ETA: 1:20 - loss: 0.0840 - accuracy: 0.9766
+10800/10800 [==============================] - 266s 25ms/sample - loss: 0.0712 - accuracy: 0.9787 - val_loss: 0.0877 - val_accuracy: 0.9717A: 3:41 - loss: 0.0727 - accuracy: 0.9821
 Epoch 5/5
-10800/10800 [==============================] - 266s 25ms/sample - loss: 0.0799 - accuracy: 0.9773 - val_loss: 0.1415 - val_accuracy: 0.9667
+10800/10800 [==============================] - 266s 25ms/sample - loss: 0.0761 - accuracy: 0.9801 - val_loss: 0.0801 - val_accuracy: 0.9750
 Testing on unseen data:
-2430/2430 [==============================] - 18s 7ms/sample - loss: 0.1403 - accuracy: 0.9617
+4709/4709 [==============================] - 32s 7ms/sample - loss: 0.0880 - accuracy: 0.9760
 Saved model to disk

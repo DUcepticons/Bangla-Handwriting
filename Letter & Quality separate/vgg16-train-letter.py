@@ -64,6 +64,6 @@ test_loss, test_acc = model.evaluate(x_test,  y_test, verbose=1)
 #model.summary()
 
 
-model.save('vgg16_model.h5')
+model.save('vgg16_model_letter.h5')
 
 print("Saved model to disk")
