@@ -11,7 +11,7 @@ import csv
 
 num_classes=12
 batch_size = 16 #more means better faster convergence but takes more resources
-train_data_num = 12000 #change it accordingly
+train_data_num = 14000 #change it accordingly
 
 letter_array=['a','b','c','d','e','f','g','h','i','j','k','x']
 
