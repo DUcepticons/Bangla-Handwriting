@@ -10,8 +10,8 @@ from tensorflow.keras.models import model_from_json, load_model
 import csv
 
 num_classes=12
-batch_size = 8 #more means better faster convergence but takes more resources
-train_data_num = 6850 #change it accordingly
+batch_size = 16 #more means better faster convergence but takes more resources
+train_data_num = 14000 #change it accordingly
 
 letter_array=['a','b','c','d','e','f','g','h','i','j','k','x']
 
@@ -31,13 +31,13 @@ tst_img_data = img_data[train_data_num:,:,:,:]
 tst_lbl_data = lbl_data[train_data_num:,:]
 
 
-model = load_model('resnet50_model_letter.h5')
+model = load_model('models/resnet50_model_letter.h5')
 
 print('Testing on unseen data:')
 x_test = applications.resnet.preprocess_input(tst_img_data)
 y_test = tst_lbl_data
 
-with open('reports/letter_resnet50_report.csv',mode='w', newline='') as csv_file:
+with open('reports/letter/resnet50_letter_report.csv',mode='w', newline='') as csv_file:
     csv_writer = csv.writer(csv_file, delimiter=',')
     csv_writer.writerow(['Input', 'Output','Labels'])
 

@@ -23,8 +23,7 @@ def file_send(path):
         print('Sending: ' + l)
         data = l + '\n'
         ser.write(data.encode()) # Send g-code block to grbl
-        grbl_out = ser.readline()
-        print(grbl_out.strip())
+        print(ser.readline().strip())
 
 try:
     #setup
@@ -41,11 +40,11 @@ try:
     single_line_send('M05')
     '''
     
-    file_send("Generated gcodes\\j.gcode")
+    file_send("C:\\Users\\akash\\Desktop\\Roman project\\Modified final gcodes\\a.gcode")
     ser.close()
     
-except Exception as e:
-    print(e)
+except :
+    print("Some error occured")
     ser.close()
 
 
