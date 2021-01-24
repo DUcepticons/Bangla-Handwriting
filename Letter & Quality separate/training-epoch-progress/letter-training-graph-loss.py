@@ -29,6 +29,7 @@ for file in os.listdir(directory):
     y= df["training loss"]
     z= df["val. loss"]
     # same plotting code as above!
+
     plt.plot(x,y,label="Training Loss")
     plt.plot(x,z,label="Validation Loss")
     plt.legend(loc='upper right')

@@ -1,15 +1,15 @@
 (16709, 2)
-Train on 10800 samples, validate on 1200 samples
+Train on 12600 samples, validate on 1400 samples
 Epoch 1/5
-10800/10800 [==============================] - 274s 25ms/sample - loss: 1.2911 - accuracy: 0.5474 - val_loss: 0.2325 - val_accuracy: 0.9342
+12600/12600 [==============================] - 319s 25ms/sample - loss: 0.8543 - accuracy: 0.7222 - val_loss: 0.1706 - val_accuracy: 0.9507
 Epoch 2/5
-10800/10800 [==============================] - 264s 24ms/sample - loss: 0.1944 - accuracy: 0.9415 - val_loss: 0.0974 - val_accuracy: 0.9708A: 21s - loss: 0.2044 - accuracy: 0.9383
+12600/12600 [==============================] - 309s 25ms/sample - loss: 0.1378 - accuracy: 0.9616 - val_loss: 0.1541 - val_accuracy: 0.9436A: 2:45 - loss: 0.1616 - accuracy: 0.9541
 Epoch 3/5
-10800/10800 [==============================] - 264s 24ms/sample - loss: 0.1262 - accuracy: 0.9632 - val_loss: 0.1031 - val_accuracy: 0.9717
+12600/12600 [==============================] - 310s 25ms/sample - loss: 0.0939 - accuracy: 0.9714 - val_loss: 0.0712 - val_accuracy: 0.9757
 Epoch 4/5
-10800/10800 [==============================] - 266s 25ms/sample - loss: 0.0712 - accuracy: 0.9787 - val_loss: 0.0877 - val_accuracy: 0.9717A: 3:41 - loss: 0.0727 - accuracy: 0.9821
+12600/12600 [==============================] - 310s 25ms/sample - loss: 0.0693 - accuracy: 0.9801 - val_loss: 0.0752 - val_accuracy: 0.9743
 Epoch 5/5
-10800/10800 [==============================] - 266s 25ms/sample - loss: 0.0761 - accuracy: 0.9801 - val_loss: 0.0801 - val_accuracy: 0.9750
+12600/12600 [==============================] - 311s 25ms/sample - loss: 0.0799 - accuracy: 0.9795 - val_loss: 0.1027 - val_accuracy: 0.9743
 Testing on unseen data:
-4709/4709 [==============================] - 32s 7ms/sample - loss: 0.0880 - accuracy: 0.9760
+2709/2709 [==============================] - 20s 7ms/sample - loss: 0.1006 - accuracy: 0.9738
 Saved model to disk

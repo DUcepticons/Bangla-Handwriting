@@ -29,10 +29,11 @@ for file in os.listdir(directory):
     y= df["training acc."]
     z= df["val. acc."]
     # same plotting code as above!
+
     plt.plot(x,y,label="Training Accuracy")
     plt.plot(x,z,label="Validation Accuracy")
     plt.legend(loc='lower right')
-        
+
     if file=="resnet50_letter.csv":        
         plt.xticks(range(len(x)+1))
     else:
