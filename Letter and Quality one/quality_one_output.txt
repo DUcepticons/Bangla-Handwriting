@@ -1,0 +1,35 @@
+(53489, 2)
+WARNING:tensorflow:`period` argument is deprecated. Please use `save_freq` to specify the frequency in number of batches seen.
+Epoch 1/10
+690/690 [==============================] - 191s 244ms/step - loss: 2.5200 - accuracy: 0.3188 - val_loss: 1.3672 - val_accuracy: 0.4327
+Epoch 2/10
+690/690 [==============================] - 193s 280ms/step - loss: 1.0567 - accuracy: 0.5691 - val_loss: 1.1606 - val_accuracy: 0.5147
+
+Epoch 00002: saving model to checkpoints\quality_predict.02-1.16.hdf5
+Epoch 3/10
+690/690 [==============================] - 239s 346ms/step - loss: 0.4279 - accuracy: 0.8711 - val_loss: 1.1517 - val_accuracy: 0.5578
+Epoch 4/10
+690/690 [==============================] - 243s 352ms/step - loss: 0.1225 - accuracy: 0.9788 - val_loss: 1.1558 - val_accuracy: 0.6029
+
+Epoch 00004: saving model to checkpoints\quality_predict.04-1.16.hdf5
+Epoch 5/10
+690/690 [==============================] - 195s 283ms/step - loss: 0.0856 - accuracy: 0.9820 - val_loss: 1.2102 - val_accuracy: 0.6157
+Epoch 6/10
+690/690 [==============================] - 199s 289ms/step - loss: 0.0874 - accuracy: 0.9780 - val_loss: 1.2106 - val_accuracy: 0.6192
+
+Epoch 00006: saving model to checkpoints\quality_predict.06-1.21.hdf5
+Epoch 7/10
+690/690 [==============================] - 223s 323ms/step - loss: 0.1334 - accuracy: 0.9580 - val_loss: 1.1313 - val_accuracy: 0.6463
+Epoch 8/10
+690/690 [==============================] - 190s 275ms/step - loss: 0.1445 - accuracy: 0.9524 - val_loss: 1.0025 - val_accuracy: 0.6969
+
+Epoch 00008: saving model to checkpoints\quality_predict.08-1.00.hdf5
+Epoch 9/10
+690/690 [==============================] - 189s 274ms/step - loss: 0.0892 - accuracy: 0.9721 - val_loss: 0.9221 - val_accuracy: 0.7263
+Epoch 10/10
+690/690 [==============================] - 188s 272ms/step - loss: 0.0449 - accuracy: 0.9866 - val_loss: 0.9095 - val_accuracy: 0.7351
+
+Epoch 00010: saving model to checkpoints\quality_predict.10-0.91.hdf5
+Testing on unseen data:
+141/141 [==============================] - 14s 68ms/step - loss: 0.9325 - accuracy: 0.7382
+Saved model to disk
