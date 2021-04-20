@@ -33,4 +33,4 @@ for letterfolder in os.listdir(LOCATION):
         p.random_brightness(probability=0.9,min_factor=0.8,max_factor=1.3)
         p.random_contrast(probability=0.9,min_factor=0.5,max_factor=1.5)
         
-        p.sample(2000)
+        p.sample(1000)

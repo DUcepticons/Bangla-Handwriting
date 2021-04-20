@@ -9,7 +9,7 @@ from tensorflow.keras.preprocessing import image
 
 num_classes=12
 batch_size = 8 #more means better faster convergence but takes more resources
-train_data_num = 12000 #change it accordingly
+train_data_num = 14000 #change it accordingly
 
 
 data= np.load('augmented_data_mini_letter.npy', allow_pickle=True)
