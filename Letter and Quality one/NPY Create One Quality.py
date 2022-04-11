@@ -10,7 +10,7 @@ from tqdm import tqdm
   
 '''Setting up the env'''
   
-LOCATION = 'D:\Github Projects\Bangla-Handwriting\Datasets\Bangla Handwriting Dataset - Augmented'
+LOCATION = 'D:\Github Projects\Bangla-Handwriting\Datasets\Bangla_Handwriting_Dataset_ Augmented_96K'
 
 LR = 1e-3
   
@@ -65,7 +65,7 @@ def create_data():
     shuffle(data) 
   
     # saving our trained data for further uses if required 
-    np.save('quality_data.npy', data) 
+    np.save('quality_data_96k.npy', data) 
 
 
 create_data()

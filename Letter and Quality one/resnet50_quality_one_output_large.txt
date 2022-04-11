@@ -1,0 +1,28 @@
+runfile('D:/Github Projects/Bangla-Handwriting/Letter and Quality one/resnet50-train-quality-one-large-data.py', wdir='D:/Github Projects/Bangla-Handwriting/Letter and Quality one')
+1 Physical GPUs, 1 Logical GPUs
+(77105,)
+(77105, 4)
+(19277,)
+(19277, 4)
+WARNING:tensorflow:`period` argument is deprecated. Please use `save_freq` to specify the frequency in number of batches seen.
+C:\ProgramData\Anaconda3\lib\site-packages\tensorflow\python\keras\engine\training.py:1844: UserWarning: `Model.fit_generator` is deprecated and will be removed in a future version. Please use `Model.fit`, which supports generators.
+  warnings.warn('`Model.fit_generator` is deprecated and '
+Epoch 1/6
+1204/1204 [==============================] - 1722s 1s/step - loss: 1.6756 - accuracy: 0.3177 - val_loss: 1.2980 - val_accuracy: 0.4025
+Epoch 2/6
+1204/1204 [==============================] - 275s 229ms/step - loss: 0.9952 - accuracy: 0.5675 - val_loss: 1.0748 - val_accuracy: 0.5835
+
+Epoch 00002: saving model to checkpoints\resnet50_quality_predict.02-1.07.hdf5
+Epoch 3/6
+1204/1204 [==============================] - 275s 229ms/step - loss: 0.4128 - accuracy: 0.8480 - val_loss: 0.9630 - val_accuracy: 0.6809
+Epoch 4/6
+1204/1204 [==============================] - 275s 229ms/step - loss: 0.1442 - accuracy: 0.9515 - val_loss: 0.6535 - val_accuracy: 0.7828
+
+Epoch 00004: saving model to checkpoints\resnet50_quality_predict.04-0.65.hdf5
+Epoch 5/6
+1204/1204 [==============================] - 275s 229ms/step - loss: 0.0982 - accuracy: 0.9677 - val_loss: 1.6611 - val_accuracy: 0.6294
+Epoch 6/6
+1204/1204 [==============================] - 275s 229ms/step - loss: 0.0904 - accuracy: 0.9683 - val_loss: 0.5578 - val_accuracy: 0.8341
+
+Epoch 00006: saving model to checkpoints\resnet50_quality_predict.06-0.56.hdf5
+Saved model to disk

@@ -1,0 +1,8 @@
+1. Put Categorized dataset (a -> 0.6 0.7 0.8 0.9, b -> 0.6 0.7 0.8 0.9,...) dataset in a path with no spaces. Select no spaces location for synthesized dataset
+2. Run create_training_images_letter.py with appropriate paths.
+3. Run image_renamer so that number in the name of an image is according to total images.
+4. Run json2yolo.py (make sure labels folder has empty folders a,b,c,...)
+5. Run label_renamer.py 
+6. Put all synthesized images in folder dataset/images and labels in dataset/labels (removing subfolders).
+7. Run yolo_dataset_split.py
+8. Create .yaml file
