@@ -1,6 +1,7 @@
 from tensorflow.keras import layers
 from tensorflow import keras
 import tensorflow as tf
+from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint, TensorBoard
 
 from imgaug.augmentables.kps import KeypointsOnImage
 from imgaug.augmentables.kps import Keypoint
@@ -13,11 +14,13 @@ import pandas as pd
 import numpy as np
 import json
 import os
+import datetime
+
 
 IMG_SIZE = 224
 BATCH_SIZE = 64
-EPOCHS = 5
-NUM_KEYPOINTS = 12 * 2  # 24 pairs each having x and y coordinates
+EPOCHS = 500
+NUM_KEYPOINTS = 12 * 2  # 12 pairs each having x and y coordinates
 
 IMG_DIR = "D:/Github Projects/Bangla-Handwriting/Datasets/Landmark detection"
 JSON = "D:/Github Projects/Bangla-Handwriting/Datasets/Landmark detection/annotations.json"
@@ -197,17 +200,25 @@ assert sample_keypoints.min() == 0.0
 sample_keypoints = sample_keypoints[:4].reshape(-1, 12, 2) * IMG_SIZE
 visualize_keypoints(sample_images[:4], sample_keypoints)
 
+#to view tensorboard data run in the folder : tensorboard --logdir logs/fit
+
+log_dir = "logs/fit/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+
+tensorboard_callback = TensorBoard(log_dir=log_dir, histogram_freq=1)
+
 def get_model():
     # Load the pre-trained weights of MobileNetV2 and freeze the weights
-    backbone = keras.applications.MobileNetV2(
+    backbone = keras.applications.ResNet50(
+    #backbone = keras.applications.MobileNetV2(
         weights="imagenet", include_top=False, input_shape=(IMG_SIZE, IMG_SIZE, 3)
     )
-    backbone.trainable = False
+    backbone.trainable = True
 
     inputs = layers.Input((IMG_SIZE, IMG_SIZE, 3))
-    x = keras.applications.mobilenet_v2.preprocess_input(inputs)
+    x = keras.applications.resnet50.preprocess_input(inputs)
+    #x = keras.applications.mobilenet_v2.preprocess_input(inputs)
     x = backbone(x)
-    x = layers.Dropout(0.3)(x)
+    x = layers.Dropout(0.2)(x)
     x = layers.SeparableConv2D(
         NUM_KEYPOINTS, kernel_size=5, strides=1, activation="relu"
     )(x)
@@ -218,15 +229,17 @@ def get_model():
     return keras.Model(inputs, outputs, name="keypoint_detector")
 
 model = get_model()
-model.compile(loss="mse", optimizer=keras.optimizers.Adam(1e-4))
-model.fit(train_dataset, validation_data=validation_dataset, epochs=EPOCHS)
+model.compile(loss="mse", optimizer=keras.optimizers.Adam(1e-3), metrics=['mean_squared_error'])
+file_path="shortlist_checkpoints/a_landmark_predict.{epoch:02d}-{val_loss:.2f}.hdf5"
+callbacks=[ModelCheckpoint(filepath=file_path, monitor='val_loss',save_best_only=True, verbose=1),tensorboard_callback]
+model.fit(train_dataset, validation_data=validation_dataset, epochs=EPOCHS, callbacks=callbacks)
 
 
 
 sample_val_images, sample_val_keypoints = next(iter(validation_dataset))
 sample_val_images = sample_val_images[:4]
-sample_val_keypoints = sample_val_keypoints[:4].reshape(-1, 24, 2) * IMG_SIZE
-predictions = model.predict(sample_val_images).reshape(-1, 24, 2) * IMG_SIZE
+sample_val_keypoints = sample_val_keypoints[:4].reshape(-1, 12, 2) * IMG_SIZE
+predictions = model.predict(sample_val_images).reshape(-1, 12, 2) * IMG_SIZE
 
 # Ground-truth
 visualize_keypoints(sample_val_images, sample_val_keypoints)
