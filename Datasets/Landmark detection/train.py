@@ -234,7 +234,7 @@ file_path="shortlist_checkpoints/a_landmark_predict.{epoch:02d}-{val_loss:.2f}.h
 callbacks=[ModelCheckpoint(filepath=file_path, monitor='val_loss',save_best_only=True, verbose=1),tensorboard_callback]
 model.fit(train_dataset, validation_data=validation_dataset, epochs=EPOCHS, callbacks=callbacks)
 
-
+model.save("a_keypoint_predict.h5")
 
 sample_val_images, sample_val_keypoints = next(iter(validation_dataset))
 sample_val_images = sample_val_images[:4]
