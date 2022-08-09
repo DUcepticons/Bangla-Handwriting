@@ -1,9 +1,9 @@
 import os
 
-dir = "D:\Github Projects\Bangla-Handwriting\Datasets\Landmark detection\\c\\c\\"
+dir = "D:\Github Projects\Bangla-Handwriting\Datasets\Landmark detection\\k-original\\"
 
 for count, filename in enumerate(os.listdir(dir)):
-        dst ='c-'+str(count+1) + ".jpg"
+        dst ='k-'+str(count+1) + ".jpg"
         #dst ="flipped-"+ filename[:-8] + "good.mp4"
         src =dir+ filename
         dst =dir+ dst

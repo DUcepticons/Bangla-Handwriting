@@ -8,7 +8,7 @@ import pandas as pd
 
 import glob
 
-json_files_location="D:\Github Projects\Bangla-Handwriting\Datasets\Landmark detection\A dataset landmark\A dataset landmark\\a\\ann"
+json_files_location="D:\Github Projects\Bangla-Handwriting\Datasets\Landmark detection\C dataset landmark\c\\ann"
 
 
 images = {}
@@ -24,7 +24,7 @@ for idx, json_file in enumerate(os.listdir(json_files_location)):
     image["img_width"] = data['size']['width']
     image["img_bbox"] = [0,0,data['size']['width'],data['size']['height']]
     image['is_multiple_dogs'] = False
-    image['img_path'] = 'a-augment-1000-keras/'+json_file[:-5]
+    image['img_path'] = 'c-augment-1000-keras/'+json_file[:-5]
     
     
     keypoints = [([0]*3) for i in range(12)]
@@ -43,7 +43,7 @@ for idx, json_file in enumerate(os.listdir(json_files_location)):
         
     image["joints"] = keypoints
 
-    images ['a-augment-1000-keras/'+json_file[:-5]] = image
+    images ['c-augment-1000-keras/'+json_file[:-5]] = image
     
-with open("annotations.json", "w") as write_file:
+with open("c_annotations.json", "w") as write_file:
     json.dump(images, write_file, indent=4)
