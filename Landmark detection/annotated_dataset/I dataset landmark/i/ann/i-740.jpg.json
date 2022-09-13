@@ -1,0 +1,230 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 136,
+        "width": 188
+    },
+    "objects": [
+        {
+            "id": 973507121,
+            "classId": 10260854,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "humayra310",
+            "createdAt": "2022-07-21T12:17:42.730Z",
+            "updatedAt": "2022-07-21T13:22:05.315Z",
+            "tags": [],
+            "classTitle": "0",
+            "points": {
+                "exterior": [
+                    [
+                        83,
+                        58
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973507126,
+            "classId": 10260855,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "humayra310",
+            "createdAt": "2022-07-21T12:17:46.976Z",
+            "updatedAt": "2022-07-21T13:22:05.315Z",
+            "tags": [],
+            "classTitle": "1",
+            "points": {
+                "exterior": [
+                    [
+                        96,
+                        51
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973507128,
+            "classId": 10260856,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "humayra310",
+            "createdAt": "2022-07-21T12:17:49.267Z",
+            "updatedAt": "2022-07-21T13:22:05.315Z",
+            "tags": [],
+            "classTitle": "2",
+            "points": {
+                "exterior": [
+                    [
+                        98,
+                        64
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973507130,
+            "classId": 10260857,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "humayra310",
+            "createdAt": "2022-07-21T12:17:53.104Z",
+            "updatedAt": "2022-07-21T13:22:05.315Z",
+            "tags": [],
+            "classTitle": "3",
+            "points": {
+                "exterior": [
+                    [
+                        95,
+                        117
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973507143,
+            "classId": 10260858,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "humayra310",
+            "createdAt": "2022-07-21T12:18:06.862Z",
+            "updatedAt": "2022-07-21T13:22:05.315Z",
+            "tags": [],
+            "classTitle": "4",
+            "points": {
+                "exterior": [
+                    [
+                        70,
+                        104
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973507148,
+            "classId": 10260859,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "humayra310",
+            "createdAt": "2022-07-21T12:18:09.851Z",
+            "updatedAt": "2022-07-21T13:22:05.315Z",
+            "tags": [],
+            "classTitle": "5",
+            "points": {
+                "exterior": [
+                    [
+                        46,
+                        112
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973507152,
+            "classId": 10260860,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "humayra310",
+            "createdAt": "2022-07-21T12:18:13.274Z",
+            "updatedAt": "2022-07-21T13:22:05.315Z",
+            "tags": [],
+            "classTitle": "6",
+            "points": {
+                "exterior": [
+                    [
+                        29,
+                        99
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973507166,
+            "classId": 10260861,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "humayra310",
+            "createdAt": "2022-07-21T12:18:26.301Z",
+            "updatedAt": "2022-07-21T13:22:05.315Z",
+            "tags": [],
+            "classTitle": "7",
+            "points": {
+                "exterior": [
+                    [
+                        120,
+                        36
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973507176,
+            "classId": 10260865,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "humayra310",
+            "createdAt": "2022-07-21T12:18:33.875Z",
+            "updatedAt": "2022-07-21T13:22:05.315Z",
+            "tags": [],
+            "classTitle": "10",
+            "points": {
+                "exterior": [
+                    [
+                        71,
+                        2
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973624615,
+            "classId": 10260862,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "humayra310",
+            "createdAt": "2022-07-21T13:22:01.349Z",
+            "updatedAt": "2022-07-21T13:22:05.315Z",
+            "tags": [],
+            "classTitle": "8",
+            "points": {
+                "exterior": [
+                    [
+                        96,
+                        20
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973624634,
+            "classId": 10260863,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "humayra310",
+            "createdAt": "2022-07-21T13:22:05.054Z",
+            "updatedAt": "2022-07-21T13:22:05.054Z",
+            "tags": [],
+            "classTitle": "9",
+            "points": {
+                "exterior": [
+                    [
+                        76,
+                        21
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}

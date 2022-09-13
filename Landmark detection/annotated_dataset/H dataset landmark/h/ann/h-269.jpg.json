@@ -1,0 +1,150 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 126,
+        "width": 198
+    },
+    "objects": [
+        {
+            "id": 973173341,
+            "classId": 10260847,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "snow_333",
+            "createdAt": "2022-07-20T19:05:54.632Z",
+            "updatedAt": "2022-07-20T19:06:14.242Z",
+            "tags": [],
+            "classTitle": "0",
+            "points": {
+                "exterior": [
+                    [
+                        116,
+                        54
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973173343,
+            "classId": 10260848,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "snow_333",
+            "createdAt": "2022-07-20T19:05:59.704Z",
+            "updatedAt": "2022-07-20T19:06:14.242Z",
+            "tags": [],
+            "classTitle": "1",
+            "points": {
+                "exterior": [
+                    [
+                        129,
+                        9
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973173344,
+            "classId": 10260849,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "snow_333",
+            "createdAt": "2022-07-20T19:06:05.932Z",
+            "updatedAt": "2022-07-20T19:06:14.242Z",
+            "tags": [],
+            "classTitle": "2",
+            "points": {
+                "exterior": [
+                    [
+                        151,
+                        59
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973173345,
+            "classId": 10260850,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "snow_333",
+            "createdAt": "2022-07-20T19:06:08.146Z",
+            "updatedAt": "2022-07-20T19:06:14.242Z",
+            "tags": [],
+            "classTitle": "3",
+            "points": {
+                "exterior": [
+                    [
+                        149,
+                        114
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973173349,
+            "classId": 10260851,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "snow_333",
+            "createdAt": "2022-07-20T19:06:10.830Z",
+            "updatedAt": "2022-07-20T19:06:14.242Z",
+            "tags": [],
+            "classTitle": "4",
+            "points": {
+                "exterior": [
+                    [
+                        129,
+                        87
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973173352,
+            "classId": 10260852,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "snow_333",
+            "createdAt": "2022-07-20T19:06:13.738Z",
+            "updatedAt": "2022-07-20T19:06:13.738Z",
+            "tags": [],
+            "classTitle": "5",
+            "points": {
+                "exterior": [
+                    [
+                        80,
+                        105
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973173354,
+            "classId": 10260853,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "snow_333",
+            "createdAt": "2022-07-20T19:06:16.352Z",
+            "updatedAt": "2022-07-20T19:06:16.352Z",
+            "tags": [],
+            "classTitle": "6",
+            "points": {
+                "exterior": [
+                    [
+                        58,
+                        66
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}
