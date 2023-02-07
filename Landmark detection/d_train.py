@@ -19,14 +19,14 @@ import datetime
 
 IMG_SIZE = 224
 BATCH_SIZE = 64
-EPOCHS = 500
-NUM_POINTS = 15
+EPOCHS = 300
+NUM_POINTS = 14
 NUM_KEYPOINTS = NUM_POINTS * 2  # pairs each having x and y coordinates
 
-IMG_DIR = "D:/Github Projects/Bangla-Handwriting/Landmark detection/annotated_dataset/B dataset landmark/b/img"
-JSON = "D:/Github Projects/Bangla-Handwriting/Landmark detection/b_annotations.json"
+IMG_DIR = "D:/Github Projects/Bangla-Handwriting/Landmark detection/annotated_dataset/D dataset landmark/d/img"
+JSON = "D:/Github Projects/Bangla-Handwriting/Landmark detection/d_annotations.json"
 KEYPOINT_DEF = (
-    "D:/Github Projects/Bangla-Handwriting/Landmark detection/b_keypoint_definitions.csv"
+    "D:/Github Projects/Bangla-Handwriting/Landmark detection/d_keypoint_definitions.csv"
 )
 
 # Load the ground-truth annotations.
@@ -231,11 +231,11 @@ def get_model():
 
 model = get_model()
 model.compile(loss="mse", optimizer=keras.optimizers.Adam(1e-3), metrics=['mean_squared_error'])
-file_path="shortlist_checkpoints/b_landmark_predict.{epoch:02d}-{val_loss:.2f}.hdf5"
+file_path="shortlist_checkpoints/d_landmark_predict.{epoch:02d}-{val_loss:.2f}.hdf5"
 callbacks=[ModelCheckpoint(filepath=file_path, monitor='val_loss',save_best_only=True, verbose=1),tensorboard_callback]
 model.fit(train_dataset, validation_data=validation_dataset, epochs=EPOCHS, callbacks=callbacks)
 
-model.save("b_keypoint_predict.h5")
+model.save("d_keypoint_predict.h5")
 
 sample_val_images, sample_val_keypoints = next(iter(validation_dataset))
 sample_val_images = sample_val_images[:4]

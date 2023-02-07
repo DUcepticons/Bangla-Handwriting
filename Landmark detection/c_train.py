@@ -20,12 +20,13 @@ import datetime
 IMG_SIZE = 224
 BATCH_SIZE = 64
 EPOCHS = 500
-NUM_KEYPOINTS = 12 * 2  # 12 pairs each having x and y coordinates
+NUM_POINTS = 12
+NUM_KEYPOINTS = NUM_POINTS * 2  # pairs each having x and y coordinates
 
-IMG_DIR = "D:/Github Projects/Bangla-Handwriting/Datasets/Landmark detection"
-JSON = "D:/Github Projects/Bangla-Handwriting/Datasets/Landmark detection/c_annotations.json"
+IMG_DIR = "D:/Github Projects/Bangla-Handwriting/Landmark detection/annotated_dataset/C dataset landmark/c/img"
+JSON = "D:/Github Projects/Bangla-Handwriting/Landmark detection/c_annotations.json"
 KEYPOINT_DEF = (
-    "D:/Github Projects/Bangla-Handwriting/Datasets/Landmark detection/c_keypoint_definitions.csv"
+    "D:/Github Projects/Bangla-Handwriting/Landmark detection/c_keypoint_definitions.csv"
 )
 
 # Load the ground-truth annotations.
@@ -161,7 +162,7 @@ class KeyPointsDataset(keras.utils.Sequence):
                 kp_temp.append(np.nan_to_num(keypoint.y))
 
             # More on why this reshaping later.
-            batch_keypoints[i,] = np.array(kp_temp).reshape(1, 1, 12 * 2)
+            batch_keypoints[i,] = np.array(kp_temp).reshape(1, 1, NUM_POINTS * 2)
 
         # Scale the coordinates to [0, 1] range.
         batch_keypoints = batch_keypoints / IMG_SIZE
@@ -197,7 +198,7 @@ sample_images, sample_keypoints = next(iter(train_dataset))
 assert sample_keypoints.max() == 1.0
 assert sample_keypoints.min() == 0.0
 
-sample_keypoints = sample_keypoints[:4].reshape(-1, 12, 2) * IMG_SIZE
+sample_keypoints = sample_keypoints[:4].reshape(-1, NUM_POINTS, 2) * IMG_SIZE
 visualize_keypoints(sample_images[:4], sample_keypoints)
 
 #to view tensorboard data run in the folder : tensorboard --logdir logs/fit
@@ -238,8 +239,8 @@ model.save("c_keypoint_predict.h5")
 
 sample_val_images, sample_val_keypoints = next(iter(validation_dataset))
 sample_val_images = sample_val_images[:4]
-sample_val_keypoints = sample_val_keypoints[:4].reshape(-1, 12, 2) * IMG_SIZE
-predictions = model.predict(sample_val_images).reshape(-1, 12, 2) * IMG_SIZE
+sample_val_keypoints = sample_val_keypoints[:4].reshape(-1, NUM_POINTS, 2) * IMG_SIZE
+predictions = model.predict(sample_val_images).reshape(-1, NUM_POINTS, 2) * IMG_SIZE
 
 # Ground-truth
 visualize_keypoints(sample_val_images, sample_val_keypoints)
