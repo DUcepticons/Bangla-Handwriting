@@ -15,7 +15,7 @@ import math
 IMG_SIZE = 224
 
 KEYPOINT_DEF = (
-    "D:/Github Projects/Bangla-Handwriting/Datasets/Landmark detection/a_keypoint_definitions.csv"
+    "D:/Github Projects/Bangla-Handwriting/Datasets/Landmark detection/d_keypoint_definitions.csv"
 )
 
 # Load the metdata definition file and preview it.
@@ -52,12 +52,21 @@ def visualize_keypoints(images, keypoints):
     plt.tight_layout(pad=2.0)
     plt.show()
 
-    
-path= "D:/Github Projects/Bangla-Handwriting/Datasets/Landmark detection/a-augment-1000-keras"
-img = "a-10.jpg"
+def slope_pos_reward(x1, y1, x2, y2):
+    if(x2 - x1 != 0):
+        return (y2-y1)/(x2-x1)
+    else:
+        return 0
+
+def get_area_penalty(x1, y1, x2, y2, x3, y3):
+    area = 0.5 * (x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2))
+    return int(area)
+
+path= "D:/Github Projects/Bangla-Handwriting/Datasets/Landmark detection/annotated_dataset/D dataset landmark"
+img = "d-10.jpg"
 
 # load model
-model = load_model("a_keypoint_predictt.hdf5")
+model = load_model("d_keypoint_predictt.hdf5")
 
 print("Loaded model from disk")
 
@@ -81,59 +90,53 @@ visualize_keypoints(img, prediction)
 
 # Points 0,1 (if available),2,3 should be in same horizontal line - matra
 matra_penalty = 0
+matra_average_y = 0
 if prediction[0][1][0] <= 10:
     matra_average_y = (prediction[0][0][1] + prediction[0][2][1] + prediction[0][3][1])/3
     matra_penalty = matra_penalty + abs(prediction[0][0][1] - matra_average_y)
     matra_penalty = matra_penalty + abs(prediction[0][2][1] - matra_average_y)
     matra_penalty = matra_penalty + abs(prediction[0][3][1] - matra_average_y)
+
 else:
     matra_average_y = (prediction[0][0][1] + prediction[0][1][1] + prediction[0][2][1] + prediction[0][3][1])/4
     
     for i in range(0,4):
         matra_penalty = matra_penalty + abs(prediction[0][i][1] - matra_average_y)
-    
-# Points 3,11,10 should be in same vertical line - akar
-akar_average_x = (prediction[0][3][0] + prediction[0][11][0] + prediction[0][10][0])/3
-akar_penalty = 0
-akar_penalty = akar_penalty + abs(prediction[0][3][0] - akar_average_x)
-akar_penalty = akar_penalty + abs(prediction[0][11][0] - akar_average_x)
-akar_penalty = akar_penalty + abs(prediction[0][10][0] - akar_average_x)
 
-# Check if 10 is below point 7
-_10_below_7_reward = prediction[0][10][1] - prediction[0][7][1]
+# Check if 6 is below point 7
+_6_below_7_reward = prediction[0][6][1] - prediction[0][7][1]
 
-# Check if 6 is below point 11
-_6_below_11_reward = prediction[0][6][1] - prediction[0][11][1]
-    
-# Check 0 and 8 are in same vertical line
-_0_8_difference_penalty = abs(prediction[0][0][0] - prediction[0][8][0])    
+# Check if 7 is below point 8
+_7_below_8_reward = prediction[0][7][1] - prediction[0][8][1]
 
-# Check 1 (if available), 4 and 7 are in same vertical line
-_1_4_7_difference_penalty = 0
-if prediction[0][1][0] <= 10:
-    _1_4_7_difference_penalty = abs(prediction[0][4][0] - prediction[0][7][0])    
-else:
-    _1_4_7_average_x = (prediction[0][1][0] + prediction[0][4][0] + prediction[0][7][0])/3
-    _1_4_7_difference_penalty = _1_4_7_difference_penalty + abs(prediction[0][1][0] - _1_4_7_average_x)
-    _1_4_7_difference_penalty = _1_4_7_difference_penalty + abs(prediction[0][4][0] - _1_4_7_average_x)
-    _1_4_7_difference_penalty = _1_4_7_difference_penalty + abs(prediction[0][7][0] - _1_4_7_average_x)   
-    
-# Distance between 6 and 7 < Distance between 7 and 8
-#_5_6_distance = math.sqrt( (prediction[0][6][0] - prediction[0][5][0])**2 + (prediction[0][6][1] - prediction[0][5][1])**2 )
-_6_7_distance = math.sqrt( (prediction[0][7][0] - prediction[0][6][0])**2 + (prediction[0][7][1] - prediction[0][6][1])**2 )
-_7_8_distance = math.sqrt( (prediction[0][8][0] - prediction[0][7][0])**2 + (prediction[0][8][1] - prediction[0][7][1])**2 )
+# Check if slope by 6 and 8 is positive
+_6_8_slope_pos_reward = slope_pos_reward([0][6][0], [0][6][1], [0][8][0], [0][8][1])
 
-_6_7_8_distance_reward = (_7_8_distance - _6_7_distance)
+# Check if 10 is below point 9
+_10_below_9_reward = prediction[0][10][1] - prediction[0][9][1]
 
-# Horizontal Distance between 0 and 2 > 3 x Horizontal Distance between 2 and 3 
-_0_2_difference = abs(prediction[0][0][0] - prediction[0][2][0])
-_2_3_difference = abs(prediction[0][2][0] - prediction[0][3][0])
-_0_2_four_times_2_3_length_reward = _0_2_difference - (3 * _2_3_difference)
+# Check if 10 is right of point 9
+_10_right_9_reward = prediction[0][10][0] - prediction[0][9][0]
+
+# Check if matra is below point 9
+_matra_below_11_reward = matra_average_y - prediction[0][11][1]
+
+# Check if matra is below point 10
+_matra_below_12_reward = matra_average_y - prediction[0][12][1]
+
+# Check if matra is below point 11
+_matra_below_13_reward = matra_average_y - prediction[0][13][1]
+
+# Check if 6,7,8 is in straight line by measuring triangle area
+_6_7_8_straight_area_penalty = get_area_penalty([0][6][0], [0][6][1], [0][7][0], [0][7][1], [0][8][0], [0][8][1])
+
+# Check 4 and 5 are in same horizontal line
+_4_5_difference_penalty = abs(prediction[0][4][1] - prediction[0][5][1])    
 
 # Scoring 
-a_score = - matra_penalty - akar_penalty + _10_below_7_reward + _6_below_11_reward - _0_8_difference_penalty - _1_4_7_difference_penalty + _6_7_8_distance_reward + _0_2_four_times_2_3_length_reward
+d_score = - matra_penalty + _6_below_7_reward + _7_below_8_reward + _6_8_slope_pos_reward + _10_below_9_reward + _10_right_9_reward + _matra_below_11_reward + _matra_below_12_reward + _matra_below_13_reward - _6_7_8_straight_area_penalty - _4_5_difference_penalty
 
-print(a_score)
+print(d_score)
 
 
 

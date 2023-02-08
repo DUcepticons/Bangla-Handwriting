@@ -128,7 +128,7 @@ _5_below_4_reward = prediction[0][5][1] - prediction[0][4][1]
 _4_5_difference_penalty = abs(prediction[0][4][1] - prediction[0][5][1])    
 
 # Scoring 
-c_score = - matra_penalty + _7_below_6_reward + _matra_below_9_reward + _matra_below_10_reward + _matra_below_11_reward + _10_below_11_reward + _9_below_11_reward + _10_right_11_reward + _9_right_10_reward + _2_right_1_reward + _5_below_4_reward + _4_5_difference_penalty
+c_score = - matra_penalty + _7_below_6_reward + _matra_below_9_reward + _matra_below_10_reward + _matra_below_11_reward + _10_below_11_reward + _9_below_11_reward + _10_right_11_reward + _9_right_10_reward + _2_right_1_reward + _5_below_4_reward - _4_5_difference_penalty
 
 print(c_score)
 
