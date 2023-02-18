@@ -11,7 +11,8 @@ from matplotlib import pyplot as plt
 from imgaug.augmentables.kps import KeypointsOnImage
 import pandas as pd
 import math
- 
+from angle_function import angle
+
 IMG_SIZE = 224
 
 KEYPOINT_DEF = (
@@ -79,6 +80,9 @@ visualize_keypoints(img, prediction)
 
 #Scoring mechanism
 
+# 0-2 and 3-11 perpendicular
+_0_2_perpend_3_11_penalty = abs(90 - angle([prediction[0][0][0], prediction[0][0][1], prediction[0][2][0],prediction[0][2][1]], [prediction[0][3][0], prediction[0][3][1], prediction[0][11][0],prediction[0][11][1]]))
+
 # Points 0,1 (if available),2,3,4 should be in same horizontal line - matra
 matra_penalty = 0
 if prediction[0][1][0] <= 10:
@@ -115,7 +119,7 @@ _0_9_difference_penalty = abs(prediction[0][0][0] - prediction[0][9][0])
 # Check 1 (if available), 4 and 7 are in same vertical line
 _1_5_8_penalty = 0
 if prediction[0][1][0] <= 10:
-    _1_5_8_difference_penalty = abs(prediction[0][4][0] - prediction[0][7][0])    
+    _1_5_8_penalty = abs(prediction[0][4][0] - prediction[0][7][0])    
 else:
     _1_5_8_average_x = (prediction[0][1][0] + prediction[0][5][0] + prediction[0][8][0])/3
     _1_5_8_penalty = _1_5_8_penalty + abs(prediction[0][1][0] - _1_5_8_average_x)
@@ -133,8 +137,18 @@ _0_2_difference = abs(prediction[0][0][0] - prediction[0][2][0])
 _2_4_difference = abs(prediction[0][2][0] - prediction[0][4][0])
 _0_2_two_times_2_4_length_reward = _0_2_difference - (2 * _2_4_difference)
 
+# Points 4,13,14 should be in same vertical line - akar
+second_akar_average_x = (prediction[0][4][0] + prediction[0][13][0] + prediction[0][14][0])/3
+second_akar_penalty = 0
+second_akar_penalty = second_akar_penalty + abs(prediction[0][4][0] - second_akar_average_x)
+second_akar_penalty = second_akar_penalty + abs(prediction[0][13][0] - second_akar_average_x)
+second_akar_penalty = second_akar_penalty + abs(prediction[0][14][0] - second_akar_average_x)
+
+# 4-14 and 3-11 parallel
+_4_14_parallel_3_11_penalty = abs(0 - angle([prediction[0][4][0], prediction[0][4][1], prediction[0][14][0],prediction[0][14][1]], [prediction[0][3][0], prediction[0][3][1], prediction[0][11][0],prediction[0][11][1]]))
+
 # Scoring 
-b_score = - matra_penalty - akar_penalty + _11_below_8_reward + _14_below_8_reward + _6_below_11_reward - _0_9_difference_penalty - _1_5_8_penalty + _7_8_9_distance_reward + _0_2_two_times_2_4_length_reward
+b_score = - _0_2_perpend_3_11_penalty - matra_penalty - akar_penalty + _11_below_8_reward + _14_below_8_reward + _6_below_11_reward - _0_9_difference_penalty - _1_5_8_penalty + _7_8_9_distance_reward + _0_2_two_times_2_4_length_reward - second_akar_penalty - _4_14_parallel_3_11_penalty
 
 print(b_score)
 
