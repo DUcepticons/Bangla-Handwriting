@@ -1,0 +1,210 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 43,
+        "width": 55
+    },
+    "objects": [
+        {
+            "id": 974432590,
+            "classId": 10260854,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "21092002",
+            "createdAt": "2022-07-22T22:23:07.061Z",
+            "updatedAt": "2022-07-22T22:23:43.163Z",
+            "tags": [],
+            "classTitle": "0",
+            "points": {
+                "exterior": [
+                    [
+                        19,
+                        20
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974432592,
+            "classId": 10260855,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "21092002",
+            "createdAt": "2022-07-22T22:23:09.597Z",
+            "updatedAt": "2022-07-22T22:23:43.163Z",
+            "tags": [],
+            "classTitle": "1",
+            "points": {
+                "exterior": [
+                    [
+                        31,
+                        11
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974432593,
+            "classId": 10260856,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "21092002",
+            "createdAt": "2022-07-22T22:23:12.611Z",
+            "updatedAt": "2022-07-22T22:23:43.163Z",
+            "tags": [],
+            "classTitle": "2",
+            "points": {
+                "exterior": [
+                    [
+                        30,
+                        25
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974432596,
+            "classId": 10260857,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "21092002",
+            "createdAt": "2022-07-22T22:23:15.791Z",
+            "updatedAt": "2022-07-22T22:23:43.163Z",
+            "tags": [],
+            "classTitle": "3",
+            "points": {
+                "exterior": [
+                    [
+                        26,
+                        38
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974432597,
+            "classId": 10260858,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "21092002",
+            "createdAt": "2022-07-22T22:23:18.592Z",
+            "updatedAt": "2022-07-22T22:23:43.163Z",
+            "tags": [],
+            "classTitle": "4",
+            "points": {
+                "exterior": [
+                    [
+                        21,
+                        31
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974432599,
+            "classId": 10260859,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "21092002",
+            "createdAt": "2022-07-22T22:23:21.906Z",
+            "updatedAt": "2022-07-22T22:23:43.163Z",
+            "tags": [],
+            "classTitle": "5",
+            "points": {
+                "exterior": [
+                    [
+                        8,
+                        33
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974432602,
+            "classId": 10260860,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "21092002",
+            "createdAt": "2022-07-22T22:23:24.952Z",
+            "updatedAt": "2022-07-22T22:23:43.163Z",
+            "tags": [],
+            "classTitle": "6",
+            "points": {
+                "exterior": [
+                    [
+                        5,
+                        26
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974432605,
+            "classId": 10260861,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "21092002",
+            "createdAt": "2022-07-22T22:23:31.108Z",
+            "updatedAt": "2022-07-22T22:23:43.163Z",
+            "tags": [],
+            "classTitle": "7",
+            "points": {
+                "exterior": [
+                    [
+                        44,
+                        19
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974432607,
+            "classId": 10260862,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "21092002",
+            "createdAt": "2022-07-22T22:23:34.714Z",
+            "updatedAt": "2022-07-22T22:23:43.163Z",
+            "tags": [],
+            "classTitle": "8",
+            "points": {
+                "exterior": [
+                    [
+                        44,
+                        2
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974432609,
+            "classId": 10260865,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "21092002",
+            "createdAt": "2022-07-22T22:23:42.774Z",
+            "updatedAt": "2022-07-22T22:23:42.774Z",
+            "tags": [],
+            "classTitle": "10",
+            "points": {
+                "exterior": [
+                    [
+                        42,
+                        0
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}

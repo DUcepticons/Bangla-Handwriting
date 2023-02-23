@@ -1,0 +1,110 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 19,
+        "width": 45
+    },
+    "objects": [
+        {
+            "id": 973172124,
+            "classId": 10260847,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "SafayatHasan",
+            "createdAt": "2022-07-20T18:47:45.477Z",
+            "updatedAt": "2022-07-20T18:48:33.260Z",
+            "tags": [],
+            "classTitle": "0",
+            "points": {
+                "exterior": [
+                    [
+                        19,
+                        6
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973172127,
+            "classId": 10260848,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "SafayatHasan",
+            "createdAt": "2022-07-20T18:47:48.929Z",
+            "updatedAt": "2022-07-20T18:48:33.260Z",
+            "tags": [],
+            "classTitle": "1",
+            "points": {
+                "exterior": [
+                    [
+                        24,
+                        2
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973172129,
+            "classId": 10260849,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "SafayatHasan",
+            "createdAt": "2022-07-20T18:47:51.049Z",
+            "updatedAt": "2022-07-20T18:48:33.260Z",
+            "tags": [],
+            "classTitle": "2",
+            "points": {
+                "exterior": [
+                    [
+                        26,
+                        8
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973172162,
+            "classId": 10260850,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "SafayatHasan",
+            "createdAt": "2022-07-20T18:48:09.955Z",
+            "updatedAt": "2022-07-20T18:48:33.260Z",
+            "tags": [],
+            "classTitle": "3",
+            "points": {
+                "exterior": [
+                    [
+                        25,
+                        15
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 973172175,
+            "classId": 10260853,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "SafayatHasan",
+            "createdAt": "2022-07-20T18:48:32.972Z",
+            "updatedAt": "2022-07-20T18:48:32.972Z",
+            "tags": [],
+            "classTitle": "6",
+            "points": {
+                "exterior": [
+                    [
+                        8,
+                        5
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}

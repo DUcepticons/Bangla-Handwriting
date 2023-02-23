@@ -1,0 +1,90 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 66,
+        "width": 100
+    },
+    "objects": [
+        {
+            "id": 974155942,
+            "classId": 10260847,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Zibat",
+            "createdAt": "2022-07-21T20:33:31.243Z",
+            "updatedAt": "2022-07-21T20:33:38.747Z",
+            "tags": [],
+            "classTitle": "0",
+            "points": {
+                "exterior": [
+                    [
+                        44,
+                        20
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974155944,
+            "classId": 10260848,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Zibat",
+            "createdAt": "2022-07-21T20:33:34.130Z",
+            "updatedAt": "2022-07-21T20:33:38.747Z",
+            "tags": [],
+            "classTitle": "1",
+            "points": {
+                "exterior": [
+                    [
+                        51,
+                        12
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974155948,
+            "classId": 10260849,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Zibat",
+            "createdAt": "2022-07-21T20:33:38.225Z",
+            "updatedAt": "2022-07-21T20:33:38.225Z",
+            "tags": [],
+            "classTitle": "2",
+            "points": {
+                "exterior": [
+                    [
+                        61,
+                        28
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974155949,
+            "classId": 10260850,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Zibat",
+            "createdAt": "2022-07-21T20:33:40.091Z",
+            "updatedAt": "2022-07-21T20:33:40.091Z",
+            "tags": [],
+            "classTitle": "3",
+            "points": {
+                "exterior": [
+                    [
+                        64,
+                        45
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}

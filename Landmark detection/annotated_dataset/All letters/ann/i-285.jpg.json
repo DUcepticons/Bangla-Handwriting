@@ -1,0 +1,230 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 123,
+        "width": 174
+    },
+    "objects": [
+        {
+            "id": 974363224,
+            "classId": 10260854,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "snow_333",
+            "createdAt": "2022-07-22T17:04:30.162Z",
+            "updatedAt": "2022-07-22T17:05:09.818Z",
+            "tags": [],
+            "classTitle": "0",
+            "points": {
+                "exterior": [
+                    [
+                        57,
+                        69
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974363233,
+            "classId": 10260855,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "snow_333",
+            "createdAt": "2022-07-22T17:04:34.087Z",
+            "updatedAt": "2022-07-22T17:05:09.818Z",
+            "tags": [],
+            "classTitle": "1",
+            "points": {
+                "exterior": [
+                    [
+                        71,
+                        52
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974363237,
+            "classId": 10260856,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "snow_333",
+            "createdAt": "2022-07-22T17:04:36.605Z",
+            "updatedAt": "2022-07-22T17:05:09.818Z",
+            "tags": [],
+            "classTitle": "2",
+            "points": {
+                "exterior": [
+                    [
+                        84,
+                        81
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974363245,
+            "classId": 10260857,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "snow_333",
+            "createdAt": "2022-07-22T17:04:38.612Z",
+            "updatedAt": "2022-07-22T17:05:09.818Z",
+            "tags": [],
+            "classTitle": "3",
+            "points": {
+                "exterior": [
+                    [
+                        82,
+                        107
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974363250,
+            "classId": 10260858,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "snow_333",
+            "createdAt": "2022-07-22T17:04:41.503Z",
+            "updatedAt": "2022-07-22T17:05:09.818Z",
+            "tags": [],
+            "classTitle": "4",
+            "points": {
+                "exterior": [
+                    [
+                        73,
+                        95
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974363260,
+            "classId": 10260859,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "snow_333",
+            "createdAt": "2022-07-22T17:04:44.325Z",
+            "updatedAt": "2022-07-22T17:05:09.818Z",
+            "tags": [],
+            "classTitle": "5",
+            "points": {
+                "exterior": [
+                    [
+                        37,
+                        98
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974363277,
+            "classId": 10260860,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "snow_333",
+            "createdAt": "2022-07-22T17:04:50.364Z",
+            "updatedAt": "2022-07-22T17:05:09.818Z",
+            "tags": [],
+            "classTitle": "6",
+            "points": {
+                "exterior": [
+                    [
+                        29,
+                        81
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974363296,
+            "classId": 10260862,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "snow_333",
+            "createdAt": "2022-07-22T17:04:55.209Z",
+            "updatedAt": "2022-07-22T17:05:09.818Z",
+            "tags": [],
+            "classTitle": "8",
+            "points": {
+                "exterior": [
+                    [
+                        97,
+                        45
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974363309,
+            "classId": 10260861,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "snow_333",
+            "createdAt": "2022-07-22T17:04:59.037Z",
+            "updatedAt": "2022-07-22T17:05:09.818Z",
+            "tags": [],
+            "classTitle": "7",
+            "points": {
+                "exterior": [
+                    [
+                        113,
+                        68
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974363325,
+            "classId": 10260865,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "snow_333",
+            "createdAt": "2022-07-22T17:05:04.420Z",
+            "updatedAt": "2022-07-22T17:05:09.818Z",
+            "tags": [],
+            "classTitle": "10",
+            "points": {
+                "exterior": [
+                    [
+                        99,
+                        9
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 974363338,
+            "classId": 10260863,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "snow_333",
+            "createdAt": "2022-07-22T17:05:08.854Z",
+            "updatedAt": "2022-07-22T17:05:08.854Z",
+            "tags": [],
+            "classTitle": "9",
+            "points": {
+                "exterior": [
+                    [
+                        88,
+                        28
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}

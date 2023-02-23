@@ -1,0 +1,290 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 61,
+        "width": 100
+    },
+    "objects": [
+        {
+            "id": 965772207,
+            "classId": 10242353,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "tapos7218",
+            "createdAt": "2022-07-12T05:45:48.344Z",
+            "updatedAt": "2022-07-12T05:47:05.191Z",
+            "tags": [],
+            "classTitle": "0",
+            "points": {
+                "exterior": [
+                    [
+                        29,
+                        23
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965772211,
+            "classId": 10242355,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "tapos7218",
+            "createdAt": "2022-07-12T05:45:53.598Z",
+            "updatedAt": "2022-07-12T05:47:05.191Z",
+            "tags": [],
+            "classTitle": "2",
+            "points": {
+                "exterior": [
+                    [
+                        56,
+                        21
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965772219,
+            "classId": 10242356,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "tapos7218",
+            "createdAt": "2022-07-12T05:45:59.841Z",
+            "updatedAt": "2022-07-12T05:47:05.191Z",
+            "tags": [],
+            "classTitle": "3",
+            "points": {
+                "exterior": [
+                    [
+                        68,
+                        21
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965772227,
+            "classId": 10242357,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "tapos7218",
+            "createdAt": "2022-07-12T05:46:03.259Z",
+            "updatedAt": "2022-07-12T05:47:05.191Z",
+            "tags": [],
+            "classTitle": "4",
+            "points": {
+                "exterior": [
+                    [
+                        48,
+                        31
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965772230,
+            "classId": 10242358,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "tapos7218",
+            "createdAt": "2022-07-12T05:46:07.596Z",
+            "updatedAt": "2022-07-12T05:47:05.191Z",
+            "tags": [],
+            "classTitle": "5",
+            "points": {
+                "exterior": [
+                    [
+                        57,
+                        31
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965772233,
+            "classId": 10242358,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "tapos7218",
+            "createdAt": "2022-07-12T05:46:10.657Z",
+            "updatedAt": "2022-07-12T05:47:05.191Z",
+            "tags": [],
+            "classTitle": "5",
+            "points": {
+                "exterior": [
+                    [
+                        51,
+                        45
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965772235,
+            "classId": 10242359,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "tapos7218",
+            "createdAt": "2022-07-12T05:46:13.152Z",
+            "updatedAt": "2022-07-12T05:47:05.191Z",
+            "tags": [],
+            "classTitle": "6",
+            "points": {
+                "exterior": [
+                    [
+                        51,
+                        45
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965772237,
+            "classId": 10242360,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "tapos7218",
+            "createdAt": "2022-07-12T05:46:15.980Z",
+            "updatedAt": "2022-07-12T05:47:05.191Z",
+            "tags": [],
+            "classTitle": "7",
+            "points": {
+                "exterior": [
+                    [
+                        71,
+                        31
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965772240,
+            "classId": 10242361,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "tapos7218",
+            "createdAt": "2022-07-12T05:46:19.076Z",
+            "updatedAt": "2022-07-12T05:47:05.191Z",
+            "tags": [],
+            "classTitle": "8",
+            "points": {
+                "exterior": [
+                    [
+                        65,
+                        42
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965772285,
+            "classId": 10242362,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "tapos7218",
+            "createdAt": "2022-07-12T05:46:53.598Z",
+            "updatedAt": "2022-07-12T05:47:05.191Z",
+            "tags": [],
+            "classTitle": "9",
+            "points": {
+                "exterior": [
+                    [
+                        66,
+                        42
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965772287,
+            "classId": 10242363,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "tapos7218",
+            "createdAt": "2022-07-12T05:46:56.973Z",
+            "updatedAt": "2022-07-12T05:47:05.191Z",
+            "tags": [],
+            "classTitle": "10",
+            "points": {
+                "exterior": [
+                    [
+                        75,
+                        42
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965772290,
+            "classId": 10242365,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "tapos7218",
+            "createdAt": "2022-07-12T05:47:00.494Z",
+            "updatedAt": "2022-07-12T05:47:05.191Z",
+            "tags": [],
+            "classTitle": "11",
+            "points": {
+                "exterior": [
+                    [
+                        62,
+                        6
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965772295,
+            "classId": 10242366,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "tapos7218",
+            "createdAt": "2022-07-12T05:47:04.940Z",
+            "updatedAt": "2022-07-12T05:47:04.940Z",
+            "tags": [],
+            "classTitle": "12",
+            "points": {
+                "exterior": [
+                    [
+                        47,
+                        11
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965772299,
+            "classId": 10242368,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "tapos7218",
+            "createdAt": "2022-07-12T05:47:07.453Z",
+            "updatedAt": "2022-07-12T05:47:07.453Z",
+            "tags": [],
+            "classTitle": "13",
+            "points": {
+                "exterior": [
+                    [
+                        40,
+                        3
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}

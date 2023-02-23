@@ -1,0 +1,230 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 117,
+        "width": 297
+    },
+    "objects": [
+        {
+            "id": 965839510,
+            "classId": 10242338,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Saniah",
+            "createdAt": "2022-07-12T15:11:51.100Z",
+            "updatedAt": "2022-07-12T15:12:37.353Z",
+            "tags": [],
+            "classTitle": "0",
+            "points": {
+                "exterior": [
+                    [
+                        70,
+                        23
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965839513,
+            "classId": 10242339,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Saniah",
+            "createdAt": "2022-07-12T15:11:58.680Z",
+            "updatedAt": "2022-07-12T15:12:37.353Z",
+            "tags": [],
+            "classTitle": "1",
+            "points": {
+                "exterior": [
+                    [
+                        141,
+                        20
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965839515,
+            "classId": 10242341,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Saniah",
+            "createdAt": "2022-07-12T15:12:01.354Z",
+            "updatedAt": "2022-07-12T15:12:37.353Z",
+            "tags": [],
+            "classTitle": "3",
+            "points": {
+                "exterior": [
+                    [
+                        184,
+                        19
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965839517,
+            "classId": 10242342,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Saniah",
+            "createdAt": "2022-07-12T15:12:02.783Z",
+            "updatedAt": "2022-07-12T15:12:37.353Z",
+            "tags": [],
+            "classTitle": "4",
+            "points": {
+                "exterior": [
+                    [
+                        228,
+                        18
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965839518,
+            "classId": 10242343,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Saniah",
+            "createdAt": "2022-07-12T15:12:04.389Z",
+            "updatedAt": "2022-07-12T15:12:37.353Z",
+            "tags": [],
+            "classTitle": "5",
+            "points": {
+                "exterior": [
+                    [
+                        126,
+                        36
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965839519,
+            "classId": 10242344,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Saniah",
+            "createdAt": "2022-07-12T15:12:06.249Z",
+            "updatedAt": "2022-07-12T15:12:37.353Z",
+            "tags": [],
+            "classTitle": "6",
+            "points": {
+                "exterior": [
+                    [
+                        152,
+                        33
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965839544,
+            "classId": 10242347,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Saniah",
+            "createdAt": "2022-07-12T15:12:25.705Z",
+            "updatedAt": "2022-07-12T15:12:37.353Z",
+            "tags": [],
+            "classTitle": "9",
+            "points": {
+                "exterior": [
+                    [
+                        78,
+                        24
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965839546,
+            "classId": 10242349,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Saniah",
+            "createdAt": "2022-07-12T15:12:32.559Z",
+            "updatedAt": "2022-07-12T15:12:35.586Z",
+            "tags": [],
+            "classTitle": "11",
+            "points": {
+                "exterior": [
+                    [
+                        181,
+                        77
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965839548,
+            "classId": 10242350,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Saniah",
+            "createdAt": "2022-07-12T15:12:33.938Z",
+            "updatedAt": "2022-07-12T15:12:37.353Z",
+            "tags": [],
+            "classTitle": "12",
+            "points": {
+                "exterior": [
+                    [
+                        181,
+                        45
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965839549,
+            "classId": 10242351,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Saniah",
+            "createdAt": "2022-07-12T15:12:35.374Z",
+            "updatedAt": "2022-07-12T15:12:35.374Z",
+            "tags": [],
+            "classTitle": "13",
+            "points": {
+                "exterior": [
+                    [
+                        224,
+                        49
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965839551,
+            "classId": 10242352,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Saniah",
+            "createdAt": "2022-07-12T15:12:37.116Z",
+            "updatedAt": "2022-07-12T15:12:37.116Z",
+            "tags": [],
+            "classTitle": "14",
+            "points": {
+                "exterior": [
+                    [
+                        221,
+                        88
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}

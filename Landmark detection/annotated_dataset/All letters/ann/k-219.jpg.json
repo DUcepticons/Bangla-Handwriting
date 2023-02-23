@@ -1,0 +1,230 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 80,
+        "width": 127
+    },
+    "objects": [
+        {
+            "id": 975204922,
+            "classId": 10273716,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Akash2",
+            "createdAt": "2022-07-24T22:01:34.784Z",
+            "updatedAt": "2022-07-24T22:01:48.973Z",
+            "tags": [],
+            "classTitle": "0",
+            "points": {
+                "exterior": [
+                    [
+                        57,
+                        41
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 975204924,
+            "classId": 10273717,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Akash2",
+            "createdAt": "2022-07-24T22:01:36.171Z",
+            "updatedAt": "2022-07-24T22:01:50.718Z",
+            "tags": [],
+            "classTitle": "1",
+            "points": {
+                "exterior": [
+                    [
+                        52,
+                        35
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 975204925,
+            "classId": 10273719,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Akash2",
+            "createdAt": "2022-07-24T22:01:37.336Z",
+            "updatedAt": "2022-07-24T22:01:50.718Z",
+            "tags": [],
+            "classTitle": "2",
+            "points": {
+                "exterior": [
+                    [
+                        78,
+                        35
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 975204926,
+            "classId": 10273720,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Akash2",
+            "createdAt": "2022-07-24T22:01:38.359Z",
+            "updatedAt": "2022-07-24T22:01:48.973Z",
+            "tags": [],
+            "classTitle": "3",
+            "points": {
+                "exterior": [
+                    [
+                        74,
+                        52
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 975204927,
+            "classId": 10273722,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Akash2",
+            "createdAt": "2022-07-24T22:01:40.007Z",
+            "updatedAt": "2022-07-24T22:01:50.718Z",
+            "tags": [],
+            "classTitle": "5",
+            "points": {
+                "exterior": [
+                    [
+                        82,
+                        64
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 975204928,
+            "classId": 10273723,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Akash2",
+            "createdAt": "2022-07-24T22:01:42.018Z",
+            "updatedAt": "2022-07-24T22:01:48.973Z",
+            "tags": [],
+            "classTitle": "6",
+            "points": {
+                "exterior": [
+                    [
+                        68,
+                        78
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 975204929,
+            "classId": 10273724,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Akash2",
+            "createdAt": "2022-07-24T22:01:43.726Z",
+            "updatedAt": "2022-07-24T22:01:50.718Z",
+            "tags": [],
+            "classTitle": "7",
+            "points": {
+                "exterior": [
+                    [
+                        46,
+                        69
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 975204930,
+            "classId": 10273725,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Akash2",
+            "createdAt": "2022-07-24T22:01:45.190Z",
+            "updatedAt": "2022-07-24T22:01:48.973Z",
+            "tags": [],
+            "classTitle": "8",
+            "points": {
+                "exterior": [
+                    [
+                        32,
+                        50
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 975204931,
+            "classId": 10273726,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Akash2",
+            "createdAt": "2022-07-24T22:01:46.973Z",
+            "updatedAt": "2022-07-24T22:01:50.718Z",
+            "tags": [],
+            "classTitle": "9",
+            "points": {
+                "exterior": [
+                    [
+                        96,
+                        30
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 975204933,
+            "classId": 10273728,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Akash2",
+            "createdAt": "2022-07-24T22:01:48.756Z",
+            "updatedAt": "2022-07-24T22:01:48.756Z",
+            "tags": [],
+            "classTitle": "10",
+            "points": {
+                "exterior": [
+                    [
+                        62,
+                        15
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 975204934,
+            "classId": 10273729,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Akash2",
+            "createdAt": "2022-07-24T22:01:50.498Z",
+            "updatedAt": "2022-07-24T22:01:50.498Z",
+            "tags": [],
+            "classTitle": "11",
+            "points": {
+                "exterior": [
+                    [
+                        54,
+                        7
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}

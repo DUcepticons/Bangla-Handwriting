@@ -1,0 +1,290 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 42,
+        "width": 63
+    },
+    "objects": [
+        {
+            "id": 965775888,
+            "classId": 10242353,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Ipshita",
+            "createdAt": "2022-07-12T06:16:38.802Z",
+            "updatedAt": "2022-07-12T06:17:00.619Z",
+            "tags": [],
+            "classTitle": "0",
+            "points": {
+                "exterior": [
+                    [
+                        13,
+                        16
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965775908,
+            "classId": 10242354,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Ipshita",
+            "createdAt": "2022-07-12T06:16:47.771Z",
+            "updatedAt": "2022-07-12T06:17:01.849Z",
+            "tags": [],
+            "classTitle": "1",
+            "points": {
+                "exterior": [
+                    [
+                        30,
+                        15
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965775912,
+            "classId": 10242355,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Ipshita",
+            "createdAt": "2022-07-12T06:16:48.810Z",
+            "updatedAt": "2022-07-12T06:17:00.619Z",
+            "tags": [],
+            "classTitle": "2",
+            "points": {
+                "exterior": [
+                    [
+                        37,
+                        14
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965775913,
+            "classId": 10242356,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Ipshita",
+            "createdAt": "2022-07-12T06:16:49.797Z",
+            "updatedAt": "2022-07-12T06:17:00.619Z",
+            "tags": [],
+            "classTitle": "3",
+            "points": {
+                "exterior": [
+                    [
+                        45,
+                        13
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965775917,
+            "classId": 10242357,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Ipshita",
+            "createdAt": "2022-07-12T06:16:50.960Z",
+            "updatedAt": "2022-07-12T06:17:01.849Z",
+            "tags": [],
+            "classTitle": "4",
+            "points": {
+                "exterior": [
+                    [
+                        29,
+                        19
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965775919,
+            "classId": 10242358,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Ipshita",
+            "createdAt": "2022-07-12T06:16:52.327Z",
+            "updatedAt": "2022-07-12T06:17:00.619Z",
+            "tags": [],
+            "classTitle": "5",
+            "points": {
+                "exterior": [
+                    [
+                        39,
+                        19
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965775922,
+            "classId": 10242359,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Ipshita",
+            "createdAt": "2022-07-12T06:16:53.329Z",
+            "updatedAt": "2022-07-12T06:17:00.619Z",
+            "tags": [],
+            "classTitle": "6",
+            "points": {
+                "exterior": [
+                    [
+                        30,
+                        28
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965775926,
+            "classId": 10242360,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Ipshita",
+            "createdAt": "2022-07-12T06:16:54.851Z",
+            "updatedAt": "2022-07-12T06:17:01.849Z",
+            "tags": [],
+            "classTitle": "7",
+            "points": {
+                "exterior": [
+                    [
+                        37,
+                        26
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965775928,
+            "classId": 10242361,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Ipshita",
+            "createdAt": "2022-07-12T06:16:55.918Z",
+            "updatedAt": "2022-07-12T06:17:00.619Z",
+            "tags": [],
+            "classTitle": "8",
+            "points": {
+                "exterior": [
+                    [
+                        51,
+                        22
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965775930,
+            "classId": 10242362,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Ipshita",
+            "createdAt": "2022-07-12T06:16:57.135Z",
+            "updatedAt": "2022-07-12T06:17:00.619Z",
+            "tags": [],
+            "classTitle": "9",
+            "points": {
+                "exterior": [
+                    [
+                        43,
+                        32
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965775933,
+            "classId": 10242363,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Ipshita",
+            "createdAt": "2022-07-12T06:16:58.306Z",
+            "updatedAt": "2022-07-12T06:17:01.849Z",
+            "tags": [],
+            "classTitle": "10",
+            "points": {
+                "exterior": [
+                    [
+                        52,
+                        32
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965775938,
+            "classId": 10242365,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Ipshita",
+            "createdAt": "2022-07-12T06:17:00.333Z",
+            "updatedAt": "2022-07-12T06:17:00.333Z",
+            "tags": [],
+            "classTitle": "11",
+            "points": {
+                "exterior": [
+                    [
+                        36,
+                        7
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965775941,
+            "classId": 10242366,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Ipshita",
+            "createdAt": "2022-07-12T06:17:01.572Z",
+            "updatedAt": "2022-07-12T06:17:01.572Z",
+            "tags": [],
+            "classTitle": "12",
+            "points": {
+                "exterior": [
+                    [
+                        25,
+                        5
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 965775944,
+            "classId": 10242368,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Ipshita",
+            "createdAt": "2022-07-12T06:17:03.006Z",
+            "updatedAt": "2022-07-12T06:17:03.006Z",
+            "tags": [],
+            "classTitle": "13",
+            "points": {
+                "exterior": [
+                    [
+                        18,
+                        1
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}

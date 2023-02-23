@@ -1,0 +1,150 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 80,
+        "width": 128
+    },
+    "objects": [
+        {
+            "id": 972446011,
+            "classId": 10260847,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Md_Shafin_Ahmed",
+            "createdAt": "2022-07-19T18:25:39.903Z",
+            "updatedAt": "2022-07-19T18:25:56.866Z",
+            "tags": [],
+            "classTitle": "0",
+            "points": {
+                "exterior": [
+                    [
+                        31,
+                        31
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 972446014,
+            "classId": 10260848,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Md_Shafin_Ahmed",
+            "createdAt": "2022-07-19T18:25:41.618Z",
+            "updatedAt": "2022-07-19T18:25:56.866Z",
+            "tags": [],
+            "classTitle": "1",
+            "points": {
+                "exterior": [
+                    [
+                        41,
+                        5
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 972446018,
+            "classId": 10260849,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Md_Shafin_Ahmed",
+            "createdAt": "2022-07-19T18:25:44.795Z",
+            "updatedAt": "2022-07-19T18:25:56.866Z",
+            "tags": [],
+            "classTitle": "2",
+            "points": {
+                "exterior": [
+                    [
+                        48,
+                        31
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 972446023,
+            "classId": 10260850,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Md_Shafin_Ahmed",
+            "createdAt": "2022-07-19T18:25:51.823Z",
+            "updatedAt": "2022-07-19T18:25:56.866Z",
+            "tags": [],
+            "classTitle": "3",
+            "points": {
+                "exterior": [
+                    [
+                        49,
+                        57
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 972446026,
+            "classId": 10260851,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Md_Shafin_Ahmed",
+            "createdAt": "2022-07-19T18:25:54.604Z",
+            "updatedAt": "2022-07-19T18:25:58.334Z",
+            "tags": [],
+            "classTitle": "4",
+            "points": {
+                "exterior": [
+                    [
+                        40,
+                        51
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 972446028,
+            "classId": 10260852,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Md_Shafin_Ahmed",
+            "createdAt": "2022-07-19T18:25:56.656Z",
+            "updatedAt": "2022-07-19T18:25:56.656Z",
+            "tags": [],
+            "classTitle": "5",
+            "points": {
+                "exterior": [
+                    [
+                        25,
+                        54
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 972446032,
+            "classId": 10260853,
+            "description": "",
+            "geometryType": "point",
+            "labelerLogin": "Md_Shafin_Ahmed",
+            "createdAt": "2022-07-19T18:25:58.132Z",
+            "updatedAt": "2022-07-19T18:25:58.132Z",
+            "tags": [],
+            "classTitle": "6",
+            "points": {
+                "exterior": [
+                    [
+                        12,
+                        36
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}
