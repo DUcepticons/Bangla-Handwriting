@@ -15,7 +15,7 @@ import math
 IMG_SIZE = 224
 
 KEYPOINT_DEF = (
-    "D:/Github Projects/Bangla-Handwriting/Datasets/Landmark detection/j_keypoint_definitions.csv"
+    "D:/Github Projects/Bangla-Handwriting/Landmark detection/j_keypoint_definitions.csv"
 )
 
 # Load the metdata definition file and preview it.
@@ -62,59 +62,72 @@ def get_area_penalty(x1, y1, x2, y2, x3, y3):
     area = 0.5 * (x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2))
     return int(area)
 
-path= "D:/Github Projects/Bangla-Handwriting/Datasets/Landmark detection/annotated_dataset/J dataset landmark"
-img = "j-10.jpg"
-
 # load model
-model = load_model("j_keypoint_predict.hdf5")
+model = load_model("j_keypoint_predict.h5")
 
 print("Loaded model from disk")
 
+letter_path = "D:/Github Projects/Bangla-Handwriting/Landmark detection/scored_dataset/j/"
 
-image_path = os.path.join(path, img) 
-# loading the image from the path and then converting them into 
-# greyscale for easier covnet prob 
-img = cv2.imread(image_path, cv2.IMREAD_COLOR) 
-  
-# resizing the image for processing them in the covnet 
-img = cv2.resize(img, (224, 224)) 
-img = img.reshape(-1,224,224,3)         
-prediction = model.predict(img).reshape(-1, 12, 2) * IMG_SIZE
+output_file_path = "j-features-quality.csv" 
 
-print(prediction)
+with open(output_file_path, mode='w', newline='') as file:
+    # Create a CSV writer object
+    writer = csv.writer(file)
 
-visualize_keypoints(img, prediction)
+    writer.writerow(["width", "height", "keypoint_0_x", "keypoint_0_y", "keypoint_1_x", "keypoint_1_y", "keypoint_2_x", "keypoint_2_y", "keypoint_3_x", "keypoint_3_y", "keypoint_4_x", "keypoint_4_y",  "keypoint_5_x", "keypoint_5_y", "keypoint_6_x", "keypoint_6_y", "keypoint_7_x", "keypoint_7_y", "keypoint_8_x", "keypoint_8_y", "feature_0", "feature_1", "feature_2", "feature_3", "feature_4", "quality"])
 
-
-#Scoring mechanism
-
-# Check if 8 is right of point 9
-_1_right_0_reward = prediction[0][1][0] - prediction[0][0][0]
-
-# Check if 0 is below point 8
-_0_below_8_reward = prediction[0][2][1] - prediction[0][0][1]
-
-# Check if 8 is below point 1
-_8_below_1_reward = prediction[0][8][1] - prediction[0][1][1]
-
-# Check if 2 and 9 have small difference
-_2_9_distance_penalty = math.sqrt( (prediction[0][2][0] - prediction[0][9][0])**2 + (prediction[0][2][1] - prediction[0][9][1])**2 )
-
-# Check if 5 is right of point 3
-_5_right_3_reward = prediction[0][5][0] - prediction[0][3][0]
+    for quality_folder in os.listdir(letter_path):
+        print ("Currently in quality folder: ",quality_folder)
+        quality_path = os.path.join(letter_path, quality_folder)
+        for img_file in os.listdir(quality_path): 
 
 
-# Distance between 1 & 6 and 2 and 8 is 1.25
-_1_6_distance = math.sqrt( (prediction[0][1][0] - prediction[0][6][0])**2 + (prediction[0][1][1] - prediction[0][6][1])**2 )
-_2_8_distance = math.sqrt( (prediction[0][2][0] - prediction[0][8][0])**2 + (prediction[0][2][1] - prediction[0][8][1])**2 ) 
-_1_6_2_7_distance_ratio_penalty = abs(1.25 - (_1_6_distance/_2_8_distance))
+            img_path = os.path.join(quality_path, img_file)
+        
+    
+            img = cv2.imread(img_path, cv2.IMREAD_COLOR) 
+            img_height = img.shape[0]
+            img_width = img.shape[1]
 
-# Scoring 
-j_score = _1_right_0_reward + _0_below_8_reward + _8_below_1_reward - _2_9_distance_penalty + _5_right_3_reward + _1_6_2_7_distance_ratio_penalty
+            # resizing the image for processing them in the covnet 
+            img = cv2.resize(img, (224, 224)) 
+            img = img.reshape(-1,224,224,3)         
+            prediction = model.predict(img).reshape(-1, 9, 2) * IMG_SIZE
 
-print(j_score)
+            print(prediction)
+
+            visualize_keypoints(img, prediction)
 
 
+            #Scoring mechanism
+
+            # Check if 8 is right of point 9
+            _1_right_0_reward = prediction[0][1][0] - prediction[0][0][0]
+
+            # Check if 0 is below point 8
+            _0_below_8_reward = prediction[0][2][1] - prediction[0][0][1]
+
+            # Check if 8 is below point 1
+            _8_below_1_reward = prediction[0][8][1] - prediction[0][1][1]
+
+            # Check if 5 is right of point 3
+            _5_right_3_reward = prediction[0][5][0] - prediction[0][3][0]
+
+
+            # Distance between 1 & 6 and 2 and 8 is 1.25
+            _1_6_distance = math.sqrt( (prediction[0][1][0] - prediction[0][6][0])**2 + (prediction[0][1][1] - prediction[0][6][1])**2 )
+            _2_8_distance = math.sqrt( (prediction[0][2][0] - prediction[0][8][0])**2 + (prediction[0][2][1] - prediction[0][8][1])**2 ) 
+            _1_6_2_8_distance_ratio_penalty = abs(1.25 - (_1_6_distance/_2_8_distance))
+
+            writer.writerow([img_width, img_height, prediction[0][0][0], prediction[0][0][1], prediction[0][1][0], prediction[0][1][1], prediction[0][2][0], prediction[0][2][1], prediction[0][3][0], prediction[0][3][1], prediction[0][4][0], prediction[0][4][1], prediction[0][5][0], prediction[0][5][1], prediction[0][6][0], prediction[0][6][1], prediction[0][7][0], prediction[0][7][1], prediction[0][8][0], prediction[0][8][1], _1_right_0_reward, _0_below_8_reward, _8_below_1_reward, _5_right_3_reward, _1_6_2_8_distance_ratio_penalty, quality_folder])
+
+            # Scoring 
+            j_score = _1_right_0_reward + _0_below_8_reward + _8_below_1_reward + _5_right_3_reward + _1_6_2_8_distance_ratio_penalty
+
+            print(j_score)
+
+file.close()   
 
 
 

@@ -15,7 +15,7 @@ import math
 IMG_SIZE = 224
 
 KEYPOINT_DEF = (
-    "D:/Github Projects/Bangla-Handwriting/Datasets/Landmark detection/i_keypoint_definitions.csv"
+    "D:/Github Projects/Bangla-Handwriting/Landmark detection/i_keypoint_definitions.csv"
 )
 
 # Load the metdata definition file and preview it.
@@ -62,63 +62,79 @@ def get_area_penalty(x1, y1, x2, y2, x3, y3):
     area = 0.5 * (x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2))
     return int(area)
 
-path= "D:/Github Projects/Bangla-Handwriting/Datasets/Landmark detection/annotated_dataset/I dataset landmark"
-img = "i-10.jpg"
-
 # load model
-model = load_model("i_keypoint_predict.hdf5")
+model = load_model("i_keypoint_predict.h5")
 
 print("Loaded model from disk")
 
+letter_path = "D:/Github Projects/Bangla-Handwriting/Landmark detection/scored_dataset/i/"
 
-image_path = os.path.join(path, img) 
-# loading the image from the path and then converting them into 
-# greyscale for easier covnet prob 
-img = cv2.imread(image_path, cv2.IMREAD_COLOR) 
-  
-# resizing the image for processing them in the covnet 
-img = cv2.resize(img, (224, 224)) 
-img = img.reshape(-1,224,224,3)         
-prediction = model.predict(img).reshape(-1, 12, 2) * IMG_SIZE
+output_file_path = "i-features-quality.csv" 
 
-print(prediction)
+with open(output_file_path, mode='w', newline='') as file:
+    # Create a CSV writer object
+    writer = csv.writer(file)
 
-visualize_keypoints(img, prediction)
+    writer.writerow(["width", "height", "keypoint_0_x", "keypoint_0_y", "keypoint_1_x", "keypoint_1_y", "keypoint_2_x", "keypoint_2_y", "keypoint_3_x", "keypoint_3_y", "keypoint_4_x", "keypoint_4_y",  "keypoint_5_x", "keypoint_5_y", "keypoint_6_x", "keypoint_6_y", "keypoint_7_x", "keypoint_7_y", "keypoint_8_x", "keypoint_8_y", "keypoint_9_x", "keypoint_9_y", "keypoint_10_x", "keypoint_10_y", "feature_0", "feature_1", "feature_2", "feature_3", "feature_4", "feature_5", "feature_6", "feature_7", "quality"])
 
-
-#Scoring mechanism
-
-# Check if 8 is right of point 9
-_1_right_0_reward = prediction[0][1][0] - prediction[0][0][0]
-
-# Check if 2 is below point 0
-_2_below_0_reward = prediction[0][2][1] - prediction[0][0][1]
-
-# Check 2 and 3 are in same vertical line
-_2_3_difference_penalty = abs(prediction[0][2][0] - prediction[0][3][0])    
-
-# Check if 3 is below point 4
-_3_below_4_reward = prediction[0][3][1] - prediction[0][4][1]
-
-# Check if 5 is below point 4
-_5_below_4_reward = prediction[0][5][1] - prediction[0][4][1]
-
-# Check if 9 is below point 0
-_3_4_5_average = (prediction[0][3][1] + prediction[0][4][1] + prediction[0][5][1])/3
-_3_4_5_below_6_reward = prediction[0][6][1] - _3_4_5_average 
-
-# Check if 2, 7, 8, 9, 10 are below each other
-_2_7_8_9_10_below_reward = (prediction[0][2][1] - prediction[0][7][1]) + (prediction[0][7][1] - prediction[0][8][1]) + (prediction[0][8][1] - prediction[0][9][1]) + (prediction[0][9][1] - prediction[0][7][1])
-
-# Check if 1 is right of point 9
-_1_right_9_reward = prediction[0][1][0] - prediction[0][9][0]
-
-# Scoring 
-i_score = _1_right_0_reward + _2_below_0_reward - _2_3_difference_penalty + _3_below_4_reward + _5_below_4_reward + _3_4_5_below_6_reward + _2_7_8_9_10_below_reward + _1_right_9_reward
-
-print(i_score)
+    for quality_folder in os.listdir(letter_path):
+        print ("Currently in quality folder: ",quality_folder)
+        quality_path = os.path.join(letter_path, quality_folder)
+        for img_file in os.listdir(quality_path): 
 
 
+            img_path = os.path.join(quality_path, img_file)
+        
+    
+            img = cv2.imread(img_path, cv2.IMREAD_COLOR) 
+            img_height = img.shape[0]
+            img_width = img.shape[1]
+              
+            # resizing the image for processing them in the covnet 
+            img = cv2.resize(img, (224, 224)) 
+            img = img.reshape(-1,224,224,3)         
+            prediction = model.predict(img).reshape(-1, 11, 2) * IMG_SIZE
+
+            print(prediction)
+
+            visualize_keypoints(img, prediction)
+
+
+            #Scoring mechanism
+
+            # Check if 8 is right of point 9
+            _1_right_0_reward = prediction[0][1][0] - prediction[0][0][0]
+
+            # Check if 2 is below point 0
+            _2_below_0_reward = prediction[0][2][1] - prediction[0][0][1]
+
+            # Check 2 and 3 are in same vertical line
+            _2_3_difference_penalty = abs(prediction[0][2][0] - prediction[0][3][0])    
+
+            # Check if 3 is below point 4
+            _3_below_4_reward = prediction[0][3][1] - prediction[0][4][1]
+
+            # Check if 5 is below point 4
+            _5_below_4_reward = prediction[0][5][1] - prediction[0][4][1]
+
+            # Check if 9 is below point 0
+            _3_4_5_average = (prediction[0][3][1] + prediction[0][4][1] + prediction[0][5][1])/3
+            _3_4_5_below_6_reward = prediction[0][6][1] - _3_4_5_average 
+
+            # Check if 2, 7, 8, 9, 10 are below each other
+            _2_7_8_9_10_below_reward = (prediction[0][2][1] - prediction[0][7][1]) + (prediction[0][7][1] - prediction[0][8][1]) + (prediction[0][8][1] - prediction[0][9][1]) + (prediction[0][9][1] - prediction[0][7][1])
+
+            # Check if 1 is right of point 9
+            _1_right_9_reward = prediction[0][1][0] - prediction[0][9][0]
+
+            writer.writerow([img_width, img_height, prediction[0][0][0], prediction[0][0][1], prediction[0][1][0], prediction[0][1][1], prediction[0][2][0], prediction[0][2][1], prediction[0][3][0], prediction[0][3][1], prediction[0][4][0], prediction[0][4][1], prediction[0][5][0], prediction[0][5][1], prediction[0][6][0], prediction[0][6][1], prediction[0][7][0], prediction[0][7][1], prediction[0][8][0], prediction[0][8][1], prediction[0][9][0], prediction[0][9][1], prediction[0][10][0], prediction[0][10][1], _1_right_0_reward, _2_below_0_reward, _2_3_difference_penalty, _3_below_4_reward, _5_below_4_reward, _3_4_5_below_6_reward, _2_7_8_9_10_below_reward, _1_right_9_reward, quality_folder])
+
+            # Scoring 
+            i_score = _1_right_0_reward + _2_below_0_reward - _2_3_difference_penalty + _3_below_4_reward + _5_below_4_reward + _3_4_5_below_6_reward + _2_7_8_9_10_below_reward + _1_right_9_reward
+
+            print(i_score)
+
+file.close()   
 
 
 

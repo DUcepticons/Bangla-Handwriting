@@ -15,7 +15,7 @@ import math
 IMG_SIZE = 224
 
 KEYPOINT_DEF = (
-    "D:/Github Projects/Bangla-Handwriting/Datasets/Landmark detection/d_keypoint_definitions.csv"
+    "D:/Github Projects/Bangla-Handwriting/Landmark detection/d_keypoint_definitions.csv"
 )
 
 # Load the metdata definition file and preview it.
@@ -62,83 +62,99 @@ def get_area_penalty(x1, y1, x2, y2, x3, y3):
     area = 0.5 * (x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2))
     return int(area)
 
-path= "D:/Github Projects/Bangla-Handwriting/Datasets/Landmark detection/annotated_dataset/D dataset landmark"
-img = "d-10.jpg"
-
 # load model
-model = load_model("d_keypoint_predictt.hdf5")
+model = load_model("d_keypoint_predict.h5")
 
 print("Loaded model from disk")
 
+letter_path = "D:/Github Projects/Bangla-Handwriting/Landmark detection/scored_dataset/d/"
 
-image_path = os.path.join(path, img) 
-# loading the image from the path and then converting them into 
-# greyscale for easier covnet prob 
-img = cv2.imread(image_path, cv2.IMREAD_COLOR) 
-  
-# resizing the image for processing them in the covnet 
-img = cv2.resize(img, (224, 224)) 
-img = img.reshape(-1,224,224,3)         
-prediction = model.predict(img).reshape(-1, 12, 2) * IMG_SIZE
+output_file_path = "d-features-quality.csv" 
 
-print(prediction)
+with open(output_file_path, mode='w', newline='') as file:
+    # Create a CSV writer object
+    writer = csv.writer(file)
 
-visualize_keypoints(img, prediction)
+    writer.writerow(["width", "height", "keypoint_0_x", "keypoint_0_y", "keypoint_1_x", "keypoint_1_y", "keypoint_2_x", "keypoint_2_y", "keypoint_3_x", "keypoint_3_y", "keypoint_4_x", "keypoint_4_y",  "keypoint_5_x", "keypoint_5_y", "keypoint_6_x", "keypoint_6_y", "keypoint_7_x", "keypoint_7_y", "keypoint_8_x", "keypoint_8_y", "keypoint_9_x", "keypoint_9_y", "keypoint_10_x", "keypoint_10_y", "keypoint_11_x", "keypoint_11_y", "keypoint_12_x", "keypoint_12_y", "keypoint_13_x", "keypoint_13_y", "feature_0", "feature_1", "feature_2", "feature_3", "feature_4", "feature_5", "feature_6", "feature_7", "feature_8", "feature_9", "feature_10", "quality"])
+
+    for quality_folder in os.listdir(letter_path):
+        print ("Currently in quality folder: ",quality_folder)
+        quality_path = os.path.join(letter_path, quality_folder)
+        for img_file in os.listdir(quality_path): 
 
 
-#Scoring mechanism
-
-# Points 0,1 (if available),2,3 should be in same horizontal line - matra
-matra_penalty = 0
-matra_average_y = 0
-if prediction[0][1][0] <= 10:
-    matra_average_y = (prediction[0][0][1] + prediction[0][2][1] + prediction[0][3][1])/3
-    matra_penalty = matra_penalty + abs(prediction[0][0][1] - matra_average_y)
-    matra_penalty = matra_penalty + abs(prediction[0][2][1] - matra_average_y)
-    matra_penalty = matra_penalty + abs(prediction[0][3][1] - matra_average_y)
-
-else:
-    matra_average_y = (prediction[0][0][1] + prediction[0][1][1] + prediction[0][2][1] + prediction[0][3][1])/4
+            img_path = os.path.join(quality_path, img_file)
+        
     
-    for i in range(0,4):
-        matra_penalty = matra_penalty + abs(prediction[0][i][1] - matra_average_y)
+            img = cv2.imread(img_path, cv2.IMREAD_COLOR) 
+            img_height = img.shape[0]
+            img_width = img.shape[1]
+  
+            # resizing the image for processing them in the covnet 
+            img = cv2.resize(img, (224, 224)) 
+            img = img.reshape(-1,224,224,3)         
+            prediction = model.predict(img).reshape(-1, 14, 2) * IMG_SIZE
 
-# Check if 6 is below point 7
-_6_below_7_reward = prediction[0][6][1] - prediction[0][7][1]
+            print(prediction)
 
-# Check if 7 is below point 8
-_7_below_8_reward = prediction[0][7][1] - prediction[0][8][1]
-
-# Check if slope by 6 and 8 is positive
-_6_8_slope_pos_reward = slope_pos_reward([0][6][0], [0][6][1], [0][8][0], [0][8][1])
-
-# Check if 10 is below point 9
-_10_below_9_reward = prediction[0][10][1] - prediction[0][9][1]
-
-# Check if 10 is right of point 9
-_10_right_9_reward = prediction[0][10][0] - prediction[0][9][0]
-
-# Check if matra is below point 9
-_matra_below_11_reward = matra_average_y - prediction[0][11][1]
-
-# Check if matra is below point 10
-_matra_below_12_reward = matra_average_y - prediction[0][12][1]
-
-# Check if matra is below point 11
-_matra_below_13_reward = matra_average_y - prediction[0][13][1]
-
-# Check if 6,7,8 is in straight line by measuring triangle area
-_6_7_8_straight_area_penalty = get_area_penalty([0][6][0], [0][6][1], [0][7][0], [0][7][1], [0][8][0], [0][8][1])
-
-# Check 4 and 5 are in same horizontal line
-_4_5_difference_penalty = abs(prediction[0][4][1] - prediction[0][5][1])    
-
-# Scoring 
-d_score = - matra_penalty + _6_below_7_reward + _7_below_8_reward + _6_8_slope_pos_reward + _10_below_9_reward + _10_right_9_reward + _matra_below_11_reward + _matra_below_12_reward + _matra_below_13_reward - _6_7_8_straight_area_penalty - _4_5_difference_penalty
-
-print(d_score)
+            visualize_keypoints(img, prediction)
 
 
+            #Scoring mechanism
+
+            # Points 0,1 (if available),2,3 should be in same horizontal line - matra
+            matra_penalty = 0
+            matra_average_y = 0
+            if prediction[0][1][0] <= 10:
+                matra_average_y = (prediction[0][0][1] + prediction[0][2][1] + prediction[0][3][1])/3
+                matra_penalty = matra_penalty + abs(prediction[0][0][1] - matra_average_y)
+                matra_penalty = matra_penalty + abs(prediction[0][2][1] - matra_average_y)
+                matra_penalty = matra_penalty + abs(prediction[0][3][1] - matra_average_y)
+
+            else:
+                matra_average_y = (prediction[0][0][1] + prediction[0][1][1] + prediction[0][2][1] + prediction[0][3][1])/4
+                
+                for i in range(0,4):
+                    matra_penalty = matra_penalty + abs(prediction[0][i][1] - matra_average_y)
+
+            # Check if 6 is below point 7
+            _6_below_7_reward = prediction[0][6][1] - prediction[0][7][1]
+
+            # Check if 7 is below point 8
+            _7_below_8_reward = prediction[0][7][1] - prediction[0][8][1]
+
+            # Check if slope by 6 and 8 is positive
+            _6_8_slope_pos_reward = slope_pos_reward(prediction[0][6][0], prediction[0][6][1], prediction[0][8][0], prediction[0][8][1])
+
+            # Check if 10 is below point 9
+            _10_below_9_reward = prediction[0][10][1] - prediction[0][9][1]
+
+            # Check if 10 is right of point 9
+            _10_right_9_reward = prediction[0][10][0] - prediction[0][9][0]
+
+            # Check if matra is below point 9
+            _matra_below_11_reward = matra_average_y - prediction[0][11][1]
+
+            # Check if matra is below point 10
+            _matra_below_12_reward = matra_average_y - prediction[0][12][1]
+
+            # Check if matra is below point 11
+            _matra_below_13_reward = matra_average_y - prediction[0][13][1]
+
+            # Check if 6,7,8 is in straight line by measuring triangle area
+            _6_7_8_straight_area_penalty = get_area_penalty(prediction[0][6][0], prediction[0][6][1], prediction[0][7][0], prediction[0][7][1], prediction[0][8][0], prediction[0][8][1])
+
+            # Check 4 and 5 are in same horizontal line
+            _4_5_difference_penalty = abs(prediction[0][4][1] - prediction[0][5][1])    
+
+            writer.writerow([img_width, img_height, prediction[0][0][0], prediction[0][0][1], prediction[0][1][0], prediction[0][1][1], prediction[0][2][0], prediction[0][2][1], prediction[0][3][0], prediction[0][3][1], prediction[0][4][0], prediction[0][4][1], prediction[0][5][0], prediction[0][5][1], prediction[0][6][0], prediction[0][6][1], prediction[0][7][0], prediction[0][7][1], prediction[0][8][0], prediction[0][8][1], prediction[0][9][0], prediction[0][9][1], prediction[0][10][0], prediction[0][10][1], prediction[0][11][0], prediction[0][11][1], prediction[0][12][0], prediction[0][12][1], prediction[0][13][0], prediction[0][13][1], matra_penalty, _6_below_7_reward, _7_below_8_reward, _6_8_slope_pos_reward, _10_below_9_reward, _10_right_9_reward, _matra_below_11_reward, _matra_below_12_reward, _matra_below_13_reward, _6_7_8_straight_area_penalty, _4_5_difference_penalty, quality_folder])
+
+            # Scoring 
+            d_score = - matra_penalty + _6_below_7_reward + _7_below_8_reward + _6_8_slope_pos_reward + _10_below_9_reward + _10_right_9_reward + _matra_below_11_reward + _matra_below_12_reward + _matra_below_13_reward - _6_7_8_straight_area_penalty - _4_5_difference_penalty
+
+            print(d_score)
+
+file.close()   
 
 
 

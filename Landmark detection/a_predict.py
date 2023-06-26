@@ -66,6 +66,8 @@ with open(output_file_path, mode='w', newline='') as file:
     # Create a CSV writer object
     writer = csv.writer(file)
 
+    writer.writerow(["width", "height", "keypoint_0_x", "keypoint_0_y", "keypoint_1_x", "keypoint_1_y", "keypoint_2_x", "keypoint_2_y", "keypoint_3_x", "keypoint_3_y", "keypoint_4_x", "keypoint_4_y",  "keypoint_5_x", "keypoint_5_y", "keypoint_6_x", "keypoint_6_y", "keypoint_7_x", "keypoint_7_y", "keypoint_8_x", "keypoint_8_y", "keypoint_9_x", "keypoint_9_y", "keypoint_10_x", "keypoint_10_y", "keypoint_11_x", "keypoint_11_y", "feature_0", "feature_1", "feature_2", "feature_3", "feature_4", "feature_5", "feature_6", "feature_7", "feature_8", "quality"])
+
     for quality_folder in os.listdir(letter_path):
         print ("Currently in quality folder: ",quality_folder)
         quality_path = os.path.join(letter_path, quality_folder)
@@ -74,13 +76,15 @@ with open(output_file_path, mode='w', newline='') as file:
         
     
             img = cv2.imread(img_path, cv2.IMREAD_COLOR) 
+            img_height = img.shape[0]
+            img_width = img.shape[1]
               
             # resizing the image for processing them in the covnet 
             img = cv2.resize(img, (224, 224)) 
             img = img.reshape(-1,224,224,3)         
             prediction = model.predict(img).reshape(-1, 12, 2) * IMG_SIZE
             
-            #print(prediction)
+            print(prediction)
             
             visualize_keypoints(img, prediction)
             
@@ -142,7 +146,7 @@ with open(output_file_path, mode='w', newline='') as file:
             _2_3_difference = abs(prediction[0][2][0] - prediction[0][3][0])
             _0_2_four_times_2_3_length_reward = _0_2_difference - (3 * _2_3_difference)
             
-            writer.writerow([_0_2_perpend_3_10_penalty, matra_penalty, akar_penalty, _10_below_7_reward, _6_below_11_reward, _0_8_difference_penalty, _1_4_7_difference_penalty, _6_7_8_distance_reward, _0_2_four_times_2_3_length_reward, quality_folder])
+            writer.writerow([img_width, img_height, prediction[0][0][0], prediction[0][0][1], prediction[0][1][0], prediction[0][1][1], prediction[0][2][0], prediction[0][2][1], prediction[0][3][0], prediction[0][3][1], prediction[0][4][0], prediction[0][4][1], prediction[0][5][0], prediction[0][5][1], prediction[0][6][0], prediction[0][6][1], prediction[0][7][0], prediction[0][7][1], prediction[0][8][0], prediction[0][8][1], prediction[0][9][0], prediction[0][9][1], prediction[0][10][0], prediction[0][10][1], prediction[0][11][0], prediction[0][11][1], _0_2_perpend_3_10_penalty, matra_penalty, akar_penalty, _10_below_7_reward, _6_below_11_reward, _0_8_difference_penalty, _1_4_7_difference_penalty, _6_7_8_distance_reward, _0_2_four_times_2_3_length_reward, quality_folder])
             
             
             # Scoring 

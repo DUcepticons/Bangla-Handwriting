@@ -12,7 +12,7 @@ import numpy as np
 from random import shuffle 
 from tqdm import tqdm 
 
-LOCATION = 'D:\Github Projects\Bangla-Handwriting\Datasets\Bangla_Handwriting_Dataset_ Augmented_96K'
+LOCATION = 'D:\Github Projects\Bangla-Handwriting\Datasets\Bangla Handwriting Dataset - Augmented 96K'
 
 # Creating an empty list where we should store the training data 
 # after a little preprocessing of the data 

@@ -10,7 +10,7 @@ from tqdm import tqdm
   
 '''Setting up the env'''
 
-LOCATION = 'D:\Github Projects\Bangla-Handwriting\Datasets\Bangla_Handwriting_Dataset_Augmented_96K'
+LOCATION = 'D:\Github Projects\Bangla-Handwriting\Datasets\Bangla Handwriting Dataset - Augmented 96K'
 
 '''Creating the training data'''
 def rename_data(): 

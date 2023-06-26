@@ -1,0 +1,47 @@
+1 Physical GPUs, 1 Logical GPUs
+(77105,)
+(77105, 4)
+(19277,)
+(19277, 4)
+WARNING:tensorflow:`period` argument is deprecated. Please use `save_freq` to specify the frequency in number of batches seen.
+C:\Users\Raiya\.conda\envs\hw39\lib\site-packages\keras\optimizers\optimizer_v2\adam.py:114: UserWarning: The `lr` argument is deprecated, use `learning_rate` instead.
+  super().__init__(name, **kwargs)
+d:\github projects\bangla-handwriting\approach 2 - letter 11 classes and quality 4 classes\quality train large augmented dataset\resnet50-train-quality-one-large-data.py:131: UserWarning: `Model.fit_generator` is deprecated and will be removed in a future version. Please use `Model.fit`, which supports generators.
+  model.fit_generator(generator=my_training_batch_generator, steps_per_epoch = int(y_train.shape[0] // batch_size), epochs=12 ,verbose=1,  callbacks=callbacks,  validation_data = my_validation_batch_generator, validation_steps = int(y_val.shape[0] // batch_size)) #will try with 5 epochs later
+Epoch 1/12
+1204/1204 [==============================] - 252s 203ms/step - loss: 1.4550 - accuracy: 0.3234 - val_loss: 1.3492 - val_accuracy: 0.3451
+Epoch 2/12
+1204/1204 [==============================] - ETA: 0s - loss: 1.0728 - accuracy: 0.5336  
+Epoch 2: saving model to checkpoints\resnet50v2_quality_predict.02-0.95.hdf5
+1204/1204 [==============================] - 244s 202ms/step - loss: 1.0728 - accuracy: 0.5336 - val_loss: 0.9484 - val_accuracy: 0.6038
+Epoch 3/12
+1204/1204 [==============================] - 242s 201ms/step - loss: 0.5268 - accuracy: 0.8026 - val_loss: 0.5259 - val_accuracy: 0.8001
+Epoch 4/12
+1204/1204 [==============================] - ETA: 0s - loss: 0.2068 - accuracy: 0.9278  
+Epoch 4: saving model to checkpoints\resnet50v2_quality_predict.04-0.43.hdf5
+1204/1204 [==============================] - 244s 202ms/step - loss: 0.2068 - accuracy: 0.9278 - val_loss: 0.4293 - val_accuracy: 0.8475
+Epoch 5/12
+1204/1204 [==============================] - 243s 202ms/step - loss: 0.1303 - accuracy: 0.9548 - val_loss: 0.4524 - val_accuracy: 0.8431
+Epoch 6/12
+1204/1204 [==============================] - ETA: 0s - loss: 0.1123 - accuracy: 0.9600  
+Epoch 6: saving model to checkpoints\resnet50v2_quality_predict.06-0.35.hdf5
+1204/1204 [==============================] - 244s 203ms/step - loss: 0.1123 - accuracy: 0.9600 - val_loss: 0.3531 - val_accuracy: 0.8831
+Epoch 7/12
+1204/1204 [==============================] - 239s 199ms/step - loss: 0.0939 - accuracy: 0.9666 - val_loss: 0.5670 - val_accuracy: 0.8335
+Epoch 8/12
+1204/1204 [==============================] - ETA: 0s - loss: 0.0820 - accuracy: 0.9713  
+Epoch 8: saving model to checkpoints\resnet50v2_quality_predict.08-0.36.hdf5
+1204/1204 [==============================] - 230s 191ms/step - loss: 0.0820 - accuracy: 0.9713 - val_loss: 0.3625 - val_accuracy: 0.8890
+Epoch 9/12
+1204/1204 [==============================] - 231s 192ms/step - loss: 0.0738 - accuracy: 0.9740 - val_loss: 0.3027 - val_accuracy: 0.9065
+Epoch 10/12
+1204/1204 [==============================] - ETA: 0s - loss: 0.0628 - accuracy: 0.9786  
+Epoch 10: saving model to checkpoints\resnet50v2_quality_predict.10-0.37.hdf5
+1204/1204 [==============================] - 234s 194ms/step - loss: 0.0628 - accuracy: 0.9786 - val_loss: 0.3676 - val_accuracy: 0.8894
+Epoch 11/12
+1204/1204 [==============================] - 237s 197ms/step - loss: 0.0620 - accuracy: 0.9787 - val_loss: 0.4124 - val_accuracy: 0.8737
+Epoch 12/12
+1204/1204 [==============================] - ETA: 0s - loss: 0.0554 - accuracy: 0.9805  
+Epoch 12: saving model to checkpoints\resnet50v2_quality_predict.12-0.29.hdf5
+1204/1204 [==============================] - 253s 210ms/step - loss: 0.0554 - accuracy: 0.9805 - val_loss: 0.2883 - val_accuracy: 0.9154
+Saved model to disk

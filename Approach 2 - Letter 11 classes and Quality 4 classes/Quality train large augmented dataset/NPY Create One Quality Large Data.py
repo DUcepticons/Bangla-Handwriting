@@ -15,7 +15,7 @@ We are changing our approach significantly. Now there will be one folder contain
   
 '''Setting up the env'''
   
-LOCATION = 'D:\Github Projects\Bangla-Handwriting\Datasets\Bangla_Handwriting_Dataset_Augmented_96K'
+LOCATION = 'D:\Github Projects\Bangla-Handwriting\Datasets\Bangla Handwriting Dataset - Augmented 96K'
 
 LR = 1e-3
   

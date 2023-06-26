@@ -10,7 +10,7 @@ from tqdm import tqdm
   
 '''Setting up the env'''
   
-LOCATION = 'D:\Github Projects\Bangla-Handwriting\Datasets\Bangla Handwriting Dataset - Augmented Mini'
+LOCATION = 'D:\Github Projects\Bangla-Handwriting\Datasets\Categorized-Dataset-with-Label'
 
 LR = 1e-3
   

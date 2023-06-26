@@ -71,7 +71,7 @@ class My_Custom_Generator(tf.keras.utils.Sequence) :
     
     
   def __len__(self) :
-    return (np.ceil(len(self.image_filenames) / float(self.batch_size))).astype(np.int)
+    return (np.ceil(len(self.image_filenames) / float(self.batch_size))).astype(int)
   
   
   def __getitem__(self, idx) :
@@ -84,7 +84,7 @@ class My_Custom_Generator(tf.keras.utils.Sequence) :
 
 
 #Code taken from: https://github.com/keras-team/keras/issues/9214
-base_model = applications.ResNet50(weights='imagenet', include_top=False)
+base_model = applications.ResNet50V2(weights='imagenet', include_top=False)
 x = base_model.output
 x = layers.GlobalMaxPooling2D()(x)
 x = layers.Dense(512, activation='relu')(x)
@@ -107,7 +107,7 @@ y_train = tr_lbl_data
 
 
 #use tensorboard --logdir logs/fit to see
-callbacks=[ModelCheckpoint(filepath="checkpoints/resnet50_quality_predict.{epoch:02d}-{val_loss:.2f}.hdf5", monitor='val_loss', verbose=1, mode='auto', period=2),tensorboard_callback]
+callbacks=[ModelCheckpoint(filepath="checkpoints/resnet50v2_quality_predict.{epoch:02d}-{val_loss:.2f}.hdf5", monitor='val_loss', verbose=1, mode='auto', period=2),tensorboard_callback]
 '''
 #print(model.evaluate(x_train, y_train, batch_size=batch_size, verbose=1))
 model.fit(x_train, y_train, epochs=2 , batch_size=batch_size, callbacks=callbacks, shuffle=False, 
@@ -128,7 +128,7 @@ my_training_batch_generator = My_Custom_Generator(X_train_filenames, y_train, ba
 my_validation_batch_generator = My_Custom_Generator(X_val_filenames, y_val, batch_size)
 
 
-model.fit_generator(generator=my_training_batch_generator, steps_per_epoch = int(77105 // batch_size), epochs=6 ,verbose=1,  callbacks=callbacks,  validation_data = my_validation_batch_generator, validation_steps = int(19277 // batch_size)) #will try with 5 epochs later
+model.fit_generator(generator=my_training_batch_generator, steps_per_epoch = int(y_train.shape[0] // batch_size), epochs=12 ,verbose=1,  callbacks=callbacks,  validation_data = my_validation_batch_generator, validation_steps = int(y_val.shape[0] // batch_size)) #will try with 5 epochs later
 
 '''
 print('Testing on unseen data:')
@@ -137,6 +137,6 @@ y_test = tst_lbl_data
 test_loss, test_acc = model.evaluate(x_test,  y_test, verbose=1)
 '''
 
-model.save('resnet50_model_quality_one_large.h5')
+model.save('resnet50v2_model_quality_one_large.h5')
 
 print("Saved model to disk")
